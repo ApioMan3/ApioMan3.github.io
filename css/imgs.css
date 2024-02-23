@@ -1,0 +1,49 @@
+#cuerpoPjs{
+    align-self: center;
+}
+#contenedor{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 25px;
+}
+
+#izquierda, #derecha{
+    width: 100px;
+    height: 200px;
+    background-color: orange;
+}
+img{
+    border-style: double;
+    border-radius: 0px;  
+    }
+
+#principal{
+    display: flex;
+    background-color: #ff6500;
+    margin: 0 -25px;
+    z-index: 2;
+}
+
+#izquierda:hover, #derecha:hover{
+    background-color:#ffc000;
+
+}
+
+#nombrepj{
+color: red;
+text-align: center;
+font-size: 45px;
+}
+
+#descripción{
+    width: 450px;
+}
+#descripción ::first-letter{
+    padding-left: 15px;
+    color:red;
+
+}
+
+
