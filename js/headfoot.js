@@ -17,6 +17,15 @@ header.appendChild(contacto);
 
 
 let footer = document.getElementById("footer");
-let universidad = document.createElement("div");
-universidad.innerHTML = 'Trabajo Práctico';
-footer.appendChild(universidad);
+let div1 = document.createElement("div");
+div1.innerHTML = '<a href="https://github.com/Mettal94">Schembri Alan';
+let div2 = document.createElement("div");
+div2.innerHTML = '<a href="https://github.com/Marii0130">Villanueva María Belén';
+let div3 = document.createElement("div");
+div3.innerHTML = '<a href="https://github.com/ApioMan3">Winiarczyk Robinson';
+let div4 = document.createElement("div");
+div4.innerHTML = '<a href="https://github.com/JNZader">Zader Javier';
+footer.appendChild(div1);
+footer.appendChild(div2);
+footer.appendChild(div3);
+footer.appendChild(div4);

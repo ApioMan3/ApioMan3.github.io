@@ -44,6 +44,8 @@ let aleatorio = Math.floor(Math.random() * listaPersonajes.length);
 let pjRandom = listaPersonajes[aleatorio];
 let nombrepjRandom = pjRandom.nombre;
 let intentos = 0;
+console.log(nombrepjRandom);
+let juego = document.getElementById("wordle");
 
 //asignando el botón enter al botón
 document.getElementById('nombre').addEventListener('keypress', function(e) {
@@ -67,7 +69,7 @@ function terminarJuego(){
     nombreInput.disabled = true;
     boton.disabled = true;
 
-    if(pjRandom.nombre="Chaos"){
+    if(nombrepjRandom=="CHAOS"){
         adiosTen();
     }
 }
@@ -89,7 +91,7 @@ function enviarPersonaje() {
 }
 
 function introducirPersonaje(){
-    let juego = document.getElementById("wordle");
+    juego = document.getElementById("wordle");
     //crear el div
     let div = document.createElement("div");
     let campo = document.forms["formulario"]["nombre"];
@@ -218,3 +220,13 @@ function adiosTen() {
         }, 5000);
     }, 3000);
 }
+
+function mostrarVentana() {
+    var div = document.getElementById("miDiv");
+    div.style.display = "block";
+  }
+  
+  function cerrarVentana() {
+    var div = document.getElementById("miDiv");
+    div.style.display = "none";
+  }

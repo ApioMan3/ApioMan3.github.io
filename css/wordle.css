@@ -80,3 +80,38 @@ button{
     transform: translate(-50%, -50%); /*para centrarla en la página*/
     z-index: 10; /*arriba de todo*/
 }
+
+.ventana-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrarla en la página*/
+    background-color: #fa8b2a;
+    padding: 20px;
+    display: none;
+    width: 40vw;
+    max-height: 40vw;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: #c56613;
+    border-style: double;
+    border-width: 10px;
+    z-index: 9; /*arriba los elentos de la página*/
+  }
+  
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer; /*cambia el cursor a la manito*/
+  }
+
+  @media screen and (max-width:550px) {
+    .ventana-flotante {
+        width: 80vw;
+        max-height: 80vw;
+      }
+      /*ajustes de ventana para resoluciones mas chicas*/
+    }

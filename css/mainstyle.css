@@ -41,19 +41,47 @@
 
 #contenido{
     flex:1;
+    margin-bottom: 60px;
 }
 
+
 #footer {
-    background-color:blue;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    color: #FFFFFF;
+    background-color: #0d1117;
     width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center; 
+    position: fixed;
+    bottom: 0px;
+    z-index: 9;
+}
+
+#footer div {
+    display: inline-block;
+    margin: 5px;
+    color: white;;
+}
+
+#footer a {
+    display: inline-block;
+    text-decoration: none; 
+    margin: 0 10px; 
+    padding: 5px 10px; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px;
+    color: white;
+}
+
+#footer div:hover {
+    background-color: #238636;
+    border-radius: 10px; 
 }
 
 h1{
-
     color:red;
     font-family: "Saiyan Sans";
     font-size: 48px;
@@ -62,8 +90,14 @@ h1{
     font-style: italic;
 }
 
+
 @media screen and (max-width:550px) {
     #header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #footer{
         display: flex;
         flex-direction: column;
         align-items: center;
