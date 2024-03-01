@@ -68,3 +68,7 @@ button{
     height: 32px;
     text-align: center;
 }
+
+#wordle{
+    padding-bottom: 50px;
+}
