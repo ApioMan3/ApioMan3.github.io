@@ -72,3 +72,11 @@ button{
 #wordle{
     padding-bottom: 50px;
 }
+
+#chaosExplosion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrarla en la página*/
+    z-index: 10; /*arriba de todo*/
+}

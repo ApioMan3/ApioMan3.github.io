@@ -36,6 +36,7 @@ const listaPersonajes = [
     { nombre: "BILLS", descripcion: "Dios de la Destrucción.", imagen: "img/dragondle/BILLS.png" },
     { nombre: "BROLY", descripcion: "El Super Saiyan Legendario.", imagen: "img/dragondle/BROLY.png" },
     { nombre: "TOPPO", descripcion: "Miembro de las tropas del orgullo.", imagen: "img/dragondle/TOPPO.png" },
+    { nombre: "CHAOS", descripcion: "Alumno de la escuela de la grulla.", imagen: "img/dragondle/CHAOS.png" },
     { nombre: "FROST", descripcion: "Combatiente del 6to universo.", imagen: "img/dragondle/FROST.png" }
 ];
 //eligiendo un personaje del arreglo y iniciando intentos.
@@ -65,6 +66,10 @@ function terminarJuego(){
     var boton = document.getElementById("boton");
     nombreInput.disabled = true;
     boton.disabled = true;
+
+    if(pjRandom.nombre="Chaos"){
+        adiosTen();
+    }
 }
 
 
@@ -193,5 +198,23 @@ function introducirPersonaje(){
     if(intentos==6){
         terminarJuego();
     }
+}
 
+function adiosTen() {
+    // Agregar elemento <img>
+    setTimeout(function() {
+        var img = document.createElement("img");
+        img.src = "img/dragondle/adios.png";
+        img.id = "chaosExplosion";
+        juego.appendChild(img);
+
+        // Reproducir audio
+        var audio = new Audio("img/dragondle/audio.mp3");
+        audio.play();
+
+        // Recargar la página
+        setTimeout(function() {
+            location.reload();
+        }, 5000);
+    }, 3000);
 }
