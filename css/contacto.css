@@ -1,0 +1,38 @@
+#contFormulario {
+    max-width: 400px; /* Ajusta el ancho máximo del formulario según sea necesario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+#contFormulario input,
+#contFormulario textarea {
+    display: block; /* Hace que los elementos de entrada y el área de texto aparezcan uno encima del otro */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    margin-bottom: 10px; /* Agrega un espacio entre cada campo */
+}
+
+#comentario {
+    height: 100px; /* Ajusta la altura del área de texto para dejar un mensaje */
+}
+#contFormulario input[type="text"] {
+    border: 2px solid orange; /* Borde de 2px sólido de color naranja */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 15px; /* Margen inferior */
+    font-family: "Saiyan Sans", Arial, sans-serif; /* Fuente */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+}
+
+#contFormulario input[type="text"]:focus {
+    outline: none; /* Eliminar el contorno al enfocar */
+    border-color: red; /* Cambiar el color del borde al enfocar */
+}
+
+#contFormulario input[type="text"]::placeholder {
+    color: #999; /* Color del texto de marcador de posición */
+}
+
+#contFormulario input[type="text"][name="comentario"] {
+    height: 100px; /* Altura específica para el campo de comentario */
+    resize: vertical; /* Permitir el redimensionamiento vertical */
+}

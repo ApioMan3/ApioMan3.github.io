@@ -1,18 +1,35 @@
-<!--
-    11) Realiza una página que muestre una imagen que cambie cuando el ratón pasa por encima de la imagen y que vuelva a cambiar cuando salga de ella.
--->
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>¿Dónde está Wally?</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <p>¿Dónde está&nbsp<span id="wally">Wally?</span></p>
-    <div id="imagen"></div>
-    <h6><span id="tiempo">20</span></h6>
-    <script src="script.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/wordle.css">
+    <link rel="icon" href="img/dragondle/logo.png" type="image/png">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contenido">
+        <div id="Dragondle">
+            <img id="ImagenPJ" src="img/dragondle/logo.png">
+            <h2 id="NombrePJ">Dragondle</h2>
+            <p id="descripcionPJ">El juego consiste en adivinar un personaje de 5 letras perteneciente al mundo de Dragon Ball.</p>
+            <form name=formulario action="#" method="post">
+            <input type="text" name="nombre" id="nombre" autocomplete="off">
+            <button type="button" id="boton" onclick="enviarPersonaje()">¡Adivinar!</button>
+            </form>
+            <p id="error">&nbsp;</p>
+        </div>
+        <div id="wordle">
+    </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="js/headfoot.js"></script>
+    <script src="js/wordle.js"></script>
+</body>
+
 </html>
