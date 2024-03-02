@@ -15,20 +15,23 @@
     <div id="header"></div>
     <div id="contenedor">
         <div id="arena">
-            <img id="pelea" src="img/arena/start001.png">
+            <img id="pelea" src="img/arena/start.png">
         </div>
     </div>
 
-    <div id=contenedor>
-        <button id="iniciar" onclick="iniciarPelea()">Iniciar pelea</button>
-        <button id="atkgoku" onclick="ataqueGoku()">Ataque de Goku</button>
-        <button id="atkpiccolo" onclick="ataquePiccolo()">Ataque de Piccolo</button>
-        <button id="recarga" onclick="recarga()">Recarga de ki</button>
+    <div id="contenedor">
+    <button id="iniciar" onclick="iniciarPelea()">Iniciar pelea</button>
     </div>
 
-    <div id=contenedor>
-        <p>Goku: Vida <span id="vidagoku">100</span> Ki <span id="kigoku">100</span></p>
-        <p>Piccolo: Vida <span id="vidapiccolo">100</span> Ki <span id="kipiccolo">100</span></p>
+    <div id="contenedor">
+        <button id="atkgoku" onclick="ataqueGoku()">Ataque de Goku</button>
+        <button id="atkpiccolo" onclick="ataquePiccolo()">Ataque de Piccolo</button>
+        <button id="recarga" onclick="recargar()">Recarga</button>
+    </div>
+
+    <div id="status">
+        <div style="float:left">Goku: <p>Vida <span id="vidagoku">100</span></p><p></p>Ki <span id="kigoku">100</span></p></div>
+        <div style="float:right">Piccolo: <p></p>Vida <span id="vidapiccolo">100</span></p><p></p>Ki <span id="kipiccolo">100</span></p></div>
     </div>
 
     </div>
