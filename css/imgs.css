@@ -1,13 +1,17 @@
 #cuerpoPjs{
     align-self: center;
+    justify-self: center;
     margin-bottom: 60px;
 }
+
 #contenedor{
     display: flex;
     align-items: center;
     align-content: center;
     align-self: center;
     margin-top: 25px;
+    justify-content: center;
+
 }
 
 #izquierda, #derecha{
@@ -40,7 +44,10 @@ font-size: 45px;
 
 #descripción{
     width: 450px;
+    position: relative;
+    display: contents;
 }
+
 #descripción ::first-letter{
     padding-left: 15px;
     color:red;

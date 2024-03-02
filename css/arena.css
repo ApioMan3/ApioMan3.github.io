@@ -1,0 +1,36 @@
+#arena {
+    width: 512px;
+    height: 256px;
+    background-image: url("../img/arena/arena.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#contenedor{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+button{
+    background-color: #fa8b2a;
+    color:#0b2743;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px white;
+    height: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+    margin: 5px;
+}
+
+button:disabled{
+    background-color: #9c6331;
+}

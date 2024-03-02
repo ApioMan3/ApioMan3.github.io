@@ -18,13 +18,13 @@ header.appendChild(contacto);
 
 let footer = document.getElementById("footer");
 let div1 = document.createElement("div");
-div1.innerHTML = '<a href="https://github.com/Mettal94">Schembri Alan';
+div1.innerHTML = '<a href="https://github.com/Mettal94" target="_blank">Schembri Alan';
 let div2 = document.createElement("div");
-div2.innerHTML = '<a href="https://github.com/Marii0130">Villanueva María Belén';
+div2.innerHTML = '<a href="https://github.com/Marii0130" target="_blank">Villanueva María Belén';
 let div3 = document.createElement("div");
-div3.innerHTML = '<a href="https://github.com/ApioMan3">Winiarczyk Robinson';
+div3.innerHTML = '<a href="https://github.com/ApioMan3" target="_blank">Winiarczyk Robinson';
 let div4 = document.createElement("div");
-div4.innerHTML = '<a href="https://github.com/JNZader">Zader Javier';
+div4.innerHTML = '<a href="https://github.com/JNZader" target="_blank">Zader Javier';
 footer.appendChild(div1);
 footer.appendChild(div2);
 footer.appendChild(div3);

@@ -4,12 +4,16 @@
   }
   
   body{
-    background-color: #fef0d5;
-    display: flex;
-    flex-direction: column;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
 }
 #header {
-    background-color: orange;
+    background-color: rgba(255, 165, 0, 0.7);
     padding: 10px;
     border-radius: 40px;  
     width: 95%;
@@ -44,6 +48,9 @@
     margin-bottom: 60px;
 }
 
+#espaciado{
+    padding: 30px;
+}
 
 #footer {
     background-color: #0d1117;
@@ -58,6 +65,7 @@
     position: fixed;
     bottom: 0px;
     z-index: 9;
+    left:0px;
 }
 
 #footer div {
@@ -101,5 +109,8 @@ h1{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    #espaciado{
+        padding: 100px;
     }
 }

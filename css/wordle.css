@@ -64,6 +64,10 @@ button{
     border-radius: 10%;
 }
 
+button:disabled{
+    background-color: #9c6331;
+}
+
 #nombre{
     height: 32px;
     text-align: center;

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/arena.css">
+    <script src="js/battle.js" defer></script>
+    <link rel="icon" href="img/dragondle/logo.png" type="image/png">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contenedor">
+        <div id="arena">
+            <img id="pelea" src="img/arena/start001.png">
+        </div>
+    </div>
+
+    <div id=contenedor>
+        <button id="iniciar" onclick="iniciarPelea()">Iniciar pelea</button>
+        <button id="atkgoku" onclick="ataqueGoku()">Ataque de Goku</button>
+        <button id="atkpiccolo" onclick="ataquePiccolo()">Ataque de Piccolo</button>
+        <button id="recarga" onclick="recarga()">Recarga de ki</button>
+    </div>
+
+    <div id=contenedor>
+        <p>Goku: Vida <span id="vidagoku">100</span> Ki <span id="kigoku">100</span></p>
+        <p>Piccolo: Vida <span id="vidapiccolo">100</span> Ki <span id="kipiccolo">100</span></p>
+    </div>
+
+    </div>
+    <div id="espaciado"></div>
+    <div id="footer"></div>
+    <script src="js/headfoot.js"></script>
+</body>
+
+</html>
