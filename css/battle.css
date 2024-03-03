@@ -39,6 +39,14 @@ button:disabled {
     background-color: #9c6331;
 }
 
+button:enabled:hover{
+    background-color: rgba(255, 165, 0);
+}
+
+button:disabled:hover {
+    background-color: #b8783f;
+}
+
 #status {
     display: flex;
     /* Para colocar los div en una misma línea */
@@ -53,8 +61,8 @@ button:disabled {
     border-radius: 30px;
     border-width: 3px;
     border-style: solid;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 70px;
+    margin-left: 70px;
     text-align: center;
     font-weight: bolder;
     font-size: 25px;

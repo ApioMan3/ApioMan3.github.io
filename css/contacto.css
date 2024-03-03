@@ -1,5 +1,5 @@
 #contFormulario {
-    max-width: 400px; /* Ajusta el ancho máximo del formulario según sea necesario */
+    max-width: 500px; /* Ajusta el ancho máximo del formulario según sea necesario */
     margin: 0 auto; /* Centra el formulario horizontalmente */
 }
 
@@ -18,7 +18,7 @@
     border-radius: 8px; /* Bordes redondeados */
     padding: 10px; /* Espacio interno */
     margin-bottom: 15px; /* Margen inferior */
-    font-family: "Saiyan Sans", Arial, sans-serif; /* Fuente */
+    font-family: Arial, sans-serif; /* Fuente */
     font-size: 16px; /* Tamaño de la fuente */
     color: #333; /* Color del texto */
 }
@@ -35,4 +35,29 @@
 #contFormulario input[type="text"][name="comentario"] {
     height: 100px; /* Altura específica para el campo de comentario */
     resize: vertical; /* Permitir el redimensionamiento vertical */
+}
+
+button {
+    background-color: #fa8b2a;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px white;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+    margin: 5px;
+}
+
+button:disabled {
+    background-color: #9c6331;
+}
+
+button:enabled:hover{
+    background-color: rgba(255, 165, 0);
+}
+
+button:disabled:hover {
+    background-color: #b8783f;
 }
