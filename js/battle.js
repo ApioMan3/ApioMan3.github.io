@@ -1,8 +1,30 @@
+//Mapa y música - INICIALIZACIÓN
+var music = new Audio("img/arena/audio/music.mp3");
+var ki = new Audio("img/arena/audio/carga.mp3");
+music.loop = true;
+music.volume = 0;
+ki.volume = 0;
+mapaActual = 0;
+var listaMapas = [
+    { nombre: "Torneo de las Artes Marciales",imagen: "img/arena/arenas/0.gif" },
+    { nombre: "Yermos",imagen: "img/arena/arenas/1.gif" },
+    { nombre: "Habitación del tiempo",imagen: "img/arena/arenas/2.gif" },
+    { nombre: "Carretera",imagen: "img/arena/arenas/3.gif" },
+    { nombre: "Páramos",imagen: "img/arena/arenas/4.gif" }
+];
+
+//Goku y Piccolo - INICIALIZACIÓN VIDA KI y AUDIO ATAQUE
 var hppiccolo = 100;
 var hpgoku = 100;
 var kipiccolo = 100;
 var kigoku = 100;
+var piccolo = new Audio("img/arena/audio/makankosappo.mp3");
+var goku = new Audio("img/arena/audio/kamehameha.mp3");
+piccolo.volume = 0;
+goku.volume = 0;
 
+
+//INICIALIZACIÓN DE LOS BOTONES DE PELEA DESACTIVADOS.
 var atkgoku = document.getElementById("atkgoku");
 atkgoku.disabled = true;
 var atkpiccolo = document.getElementById("atkpiccolo");
@@ -10,6 +32,7 @@ atkpiccolo.disabled = true;
 var recarga = document.getElementById("recarga");
 recarga.disabled = true;
 
+//OBTENER VALORES INICIALES DE VIDA Y KI DE LOS PERSONAJES PARA USAR EN LOS MÉTODOS.
 var vidagoku = document.getElementById("vidagoku").textContent;
 var kigoku = document.getElementById("kigoku").textContent;
 var vidapiccolo = document.getElementById("vidapiccolo").textContent;
@@ -19,24 +42,22 @@ var kipiccolo = document.getElementById("kipiccolo").textContent;
 
 function iniciarPelea() {
     desactivarBotones();
-    var arena = document.getElementById("arena");
-    arena.innerHTML = '';
-    let img = document.createElement("img");
-    img.src = "img/arena/start.gif";
-    arena.appendChild(img);
-    var iniciar = document.getElementById("iniciar");
-    setTimeout(standby, 1600);
+    var arena = document.getElementById("pelea");
+    arena.src = "img/arena/start.gif";
+    var mapaizq = document.getElementById("mapaizq");
+    mapaizq.disabled = true;
+    var mapader = document.getElementById("mapader");
+    mapader.disabled = true;
+    music.play();
+    setTimeout(standby, 1300);
 }
 
 function ataquePiccolo() {
     if (kipiccolo >= 10) {
+        piccolo.play();
         desactivarBotones();
-        console.log(kipiccolo);
-        var arena = document.getElementById("arena");
-        arena.innerHTML = '';
-        let img = document.createElement("img");
+        var img = document.getElementById("pelea");
         img.src = "img/arena/ataquepiccolo.gif" + '?x=' + Date.now(); //El date es para recargar el gif
-        arena.appendChild(img);
         //resta ki a Piccolo
         kipiccolo = (kipiccolo - 10);
         document.getElementById("kipiccolo").innerText = kipiccolo;
@@ -61,13 +82,11 @@ function ataquePiccolo() {
 
 function ataqueGoku() {
     if (kigoku >= 10) {
+        goku.play();
         desactivarBotones();
         console.log(kigoku);
-        var arena = document.getElementById("arena");
-        arena.innerHTML = '';
-        let img = document.createElement("img");
+        var img = document.getElementById("pelea");
         img.src = "img/arena/ataquegoku.gif" + '?x=' + Date.now(); //El date es para recargar el gif
-        arena.appendChild(img);
 
         //resta ki a Goku
         kigoku = (kigoku - 10);
@@ -93,11 +112,9 @@ function ataqueGoku() {
 
 function recargar() {
     desactivarBotones();
-    var arena = document.getElementById("arena");
-    arena.innerHTML = '';
-    let img = document.createElement("img");
+    ki.play();
+    var img = document.getElementById("pelea");
     img.src = "img/arena/carga.gif";
-    arena.appendChild(img);
     var iniciar = document.getElementById("iniciar");
     setTimeout(standby, 3000);
     
@@ -141,30 +158,21 @@ function recargar() {
 }
 
 function standby() {
-    var arena = document.getElementById("arena");
-    arena.innerHTML = '';
-    let img = document.createElement("img");
+    var img = document.getElementById("pelea");
     img.src = "img/arena/standby.png";
-    arena.appendChild(img);
     atkgoku.disabled = false;
     atkpiccolo.disabled = false;
     recarga.disabled = false;
 }
 
 function piccoloWins() {
-    var arena = document.getElementById("arena");
-    arena.innerHTML = '';
-    let img = document.createElement("img");
+    var img = document.getElementById("pelea");
     img.src = "img/arena/piccolowins.gif";
-    arena.appendChild(img);
 }
 
 function gokuWins() {
-    var arena = document.getElementById("arena");
-    arena.innerHTML = '';
-    let img = document.createElement("img");
+    var img = document.getElementById("pelea");
     img.src = "img/arena/gokuwins.gif";
-    arena.appendChild(img);
 }
 
 function desactivarBotones(){
@@ -172,5 +180,43 @@ function desactivarBotones(){
     atkgoku.disabled = true;
     atkpiccolo.disabled = true;
     recarga.disabled = true;
+}
+
+function mapaIzquierda(){
+    if(mapaActual == 0){
+        mapaActual = listaMapas.length-1;
+    }else{
+        mapaActual--;
+    }
+    var arena = document.getElementById("arena");
+    arena.style.backgroundImage = "url("+listaMapas[mapaActual].imagen+")";
+}
+
+function mapaDerecha(){
+    if(mapaActual == (listaMapas.length-1)){
+        mapaActual = 0;
+    }else{
+        mapaActual++;
+    }
+    var arena = document.getElementById("arena");
+    arena.style.backgroundImage = "url("+listaMapas[mapaActual].imagen+")";
+}
+
+
+function cambiarVolumen() {
+    var span = document.getElementById("volumen");
+    if (span.innerHTML == "🔈") {
+        span.innerHTML = "🔊"; // Cambiar icono a activado
+        music.volume = 0.25;
+        goku.volume = 0.6;
+        piccolo.volume = 0.5;
+        ki.volume = 0.5;
+    } else {
+        span.innerHTML = "🔈"; // Cambiar icono a desactivado
+        music.volume = 0;
+        goku.volume = 0;
+        piccolo.volume = 0;
+        ki.volume = 0;
+    }
 }
 

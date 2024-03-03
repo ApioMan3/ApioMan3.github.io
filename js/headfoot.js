@@ -2,20 +2,20 @@
 let header = document.getElementById("header")
 let inicio = document.createElement("div");
 let personajes = document.createElement("div");
-let sobreNosotros = document.createElement("div");
+let quiz = document.createElement("div");
 let battle = document.createElement("div");
 let contacto = document.createElement("div");
 
 inicio.innerHTML = '<a href="index.html">Inicio</a>';
 battle.innerHTML = '<a href="battle.html">Torneo</a>';
 personajes.innerHTML = '<a href="characters.html">Personajes</a>';
-sobreNosotros.innerHTML = '<a href="about.html">Sobre Nosotros</a>';
+quiz.innerHTML = '<a href="quiz.html">Trivia</a>';
 contacto.innerHTML = '<a href="contact.html">Contacto</a>';
 
 header.appendChild(inicio);
 header.appendChild(battle);
 header.appendChild(personajes);
-header.appendChild(sobreNosotros);   
+header.appendChild(quiz);   
 header.appendChild(contacto);
 
 

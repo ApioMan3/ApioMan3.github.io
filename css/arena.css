@@ -1,12 +1,15 @@
 #arena {
     width: 512px;
     height: 256px;
-    background-image: url("../img/arena/arena.png");
+    background-image: url("../img/arena/arenas/0.gif");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    border: 2px;
+    border-color: black;
+    border-style:outset;
 }
 
 #contenedor{
@@ -40,4 +43,11 @@ button:disabled{
     height: 50vp;
     display: block;
     padding-bottom: 100px;;
+}
+
+@media screen and (max-width:550px) {
+    #arena, #pelea{
+        width: 95%;
+        height: auto;
+    }
 }
