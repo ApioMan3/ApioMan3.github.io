@@ -3,18 +3,21 @@ let header = document.getElementById("header")
 let inicio = document.createElement("div");
 let personajes = document.createElement("div");
 let quiz = document.createElement("div");
+let cac = document.createElement("div");
 let battle = document.createElement("div");
 let contacto = document.createElement("div");
 
 inicio.innerHTML = '<a href="index.html">Inicio</a>';
 battle.innerHTML = '<a href="battle.html">Torneo</a>';
-personajes.innerHTML = '<a href="characters.html">Personajes</a>';
-quiz.innerHTML = '<a href="quiz.html">Trivia</a>';
+personajes.innerHTML = '<a href="characters.html">Info</a>';
+quiz.innerHTML = '<a href="quiz.html">Quiz</a>';
+cac.innerHTML = '<a href="creator.html">Creador</a>';
 contacto.innerHTML = '<a href="contact.html">Contacto</a>';
 
 header.appendChild(inicio);
 header.appendChild(battle);
 header.appendChild(personajes);
+header.appendChild(cac);
 header.appendChild(quiz);   
 header.appendChild(contacto);
 
