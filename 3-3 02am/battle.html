@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/arena.css">
+    <script src="js/battle.js" defer></script>
+    <link rel="icon" href="img/dragondle/logo.png" type="image/png">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contenedor">
+        <div id="arena">
+            <img id="pelea" src="img/arena/start.png">
+        </div>
+    </div>
+
+    <div id="contenedor"><span id="volumen" onclick="cambiarVolumen()">🔈</span></div>
+
+    <div id="contenedor">
+        <button id="mapaizq" onclick="mapaIzquierda()">&#129152;</button>
+    <button id="iniciar" onclick="iniciarPelea()">Iniciar pelea</button>
+    <button id="mapader" onclick="mapaDerecha()">&#129154;</button>
+    </div>
+
+    <div id="contenedor">
+        <button id="atkgoku" onclick="ataqueGoku()">Ataque de Goku</button>
+        <button id="atkpiccolo" onclick="ataquePiccolo()">Ataque de Piccolo</button>
+        <button id="recarga" onclick="recargar()">Recarga</button>
+    </div>
+
+    <div id="status">
+        <div style="float:left">Goku: <p>Vida <span id="vidagoku">100</span></p><p></p>Ki <span id="kigoku">100</span></p></div>
+        <div style="float:right">Piccolo: <p></p>Vida <span id="vidapiccolo">100</span></p><p></p>Ki <span id="kipiccolo">100</span></p></div>
+    </div>
+
+    </div>
+    <div id="espaciado"></div>
+    <div id="footer"></div>
+    <script src="js/headfoot.js"></script>
+</body>
+
+</html>

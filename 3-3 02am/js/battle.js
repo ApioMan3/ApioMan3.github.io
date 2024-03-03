@@ -63,7 +63,7 @@ function ataquePiccolo() {
         document.getElementById("kipiccolo").innerText = kipiccolo;
 
         //resta vida a Goku
-        vidagoku = vidagoku - (Math.floor(Math.random() * 15) + 5);
+        vidagoku = vidagoku - (Math.floor(Math.random() * 20) + 5);
         if (vidagoku <= 0) {
             //en caso de bajar a 0, evento de victoria de piccolo
             document.getElementById("vidagoku").innerText = 0;
@@ -93,7 +93,7 @@ function ataqueGoku() {
         document.getElementById("kigoku").innerText = kigoku;
 
         //resta vida a Piccolo
-        vidapiccolo = vidapiccolo - (Math.floor(Math.random() * 15) + 5);
+        vidapiccolo = vidapiccolo - (Math.floor(Math.random() * 20) + 5);
         if (vidapiccolo <= 0) {
             //en caso de bajar a 0, evento de victoria de Goku
             document.getElementById("vidapiccolo").innerText = 0;
@@ -119,10 +119,10 @@ function recargar() {
     setTimeout(standby, 3000);
     
     //Generación de recuperación al azar.
-    kigoku = (kigoku + parseInt((Math.floor(Math.random() * 10) + 5)));
-    vidagoku = (vidagoku + parseInt((Math.floor(Math.random() * 20) + 5)));
-    kipiccolo = (kipiccolo + parseInt((Math.floor(Math.random() * 10) + 5)));
-    vidapiccolo = (vidapiccolo + parseInt((Math.floor(Math.random() * 20) + 5)));
+    kigoku = (kigoku + parseInt((Math.floor(Math.random() * 5) + 5)));
+    vidagoku = (vidagoku + parseInt((Math.floor(Math.random() * 30) + 5)));
+    kipiccolo = (kipiccolo + parseInt((Math.floor(Math.random() * 5) + 5)));
+    vidapiccolo = (vidapiccolo + parseInt((Math.floor(Math.random() * 30) + 5)));
     
     
     
@@ -219,14 +219,4 @@ function cambiarVolumen() {
         ki.volume = 0;
     }
 }
-
-function mostrarVentana() {
-    var div = document.getElementById("miDiv");
-    div.style.display = "block";
-  }
-
-  function cerrarVentana() {
-    var div = document.getElementById("miDiv");
-    div.style.display = "none";
-  }
 

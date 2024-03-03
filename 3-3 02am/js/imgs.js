@@ -40,12 +40,6 @@ let arreglo = [
     img: "img/Krillin.png",
     descripcion:
       "<p>Krillin es uno de los amigos más cercanos de Goku y uno de los guerreros humanos más fuertes de la Tierra. A pesar de no poseer la fuerza sobrenatural de los Saiyan o Namekianos, ha demostrado una habilidad impresionante en el combate y una determinación inquebrantable en la batalla.</p><p>A lo largo de su vida, ha enfrentado desafíos inimaginables y ha luchado junto a Goku y los otros guerreros Z para proteger a la Tierra de la destrucción. Aunque su tamaño pueda ser engañoso, su valentía y su corazón son más grandes que cualquier adversidad.</p><p>Con su ingenio y su valentía, Krillin ha superado innumerables obstáculos y ha demostrado que incluso los humanos más ordinarios pueden alcanzar la grandeza cuando luchan con determinación y coraje. Aunque su papel en la lucha contra enemigos poderosos a menudo se pasa por alto, su contribución al equipo y su amistad con Goku son invaluables para la causa de la justicia y la protección de la Tierra.</p>"
-  },
-  {
-    nombre: "Piccolo",
-    img: "img/Piccolo.png",
-    descripcion:
-      "<p>Piccolo es un Namekiano guerrero y antiguo archienemigo de Goku. Aunque comenzó su vida como un villano, Piccolo eventualmente se redimió y se convirtió en uno de los aliados más cercanos de Goku y sus amigos. Su dedicación a la protección de la Tierra y su valentía en la batalla lo han convertido en un miembro invaluable de los Guerreros Z.</p><p>Con el tiempo, Piccolo desarrolló un profundo respeto y amistad por Goku y su familia, especialmente por Gohan, el hijo de Goku. Aunque su origen y su pasado son a menudo objeto de sospecha y desconfianza, Piccolo ha demostrado una y otra vez su lealtad y su voluntad de sacrificio por el bienestar de los demás.</p><p>Con una combinación de habilidades de combate supremas y una sabiduría profunda, Piccolo es uno de los estrategas más capaces del equipo, capaz de anticipar los movimientos de sus enemigos y adaptarse a cualquier situación. Aunque su temperamento puede ser severo y distante, su corazón está verdaderamente con los Guerreros Z y su causa de proteger a la Tierra de todas las amenazas.</p>"
   }
 ];
 

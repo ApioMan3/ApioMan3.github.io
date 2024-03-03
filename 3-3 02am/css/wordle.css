@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Instruction";
+    src: url("../font/InstructionBold.otf") format(".otf");
+  }
+
+h2{
+    font-family: "Instruction";
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+#ImagenPJ{
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+#Dragondle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+#juego{
+    padding: 10px;
+    border-radius: 40px;  
+    width: 95%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#letra ,#letraPosible , #letraCorrecta {
+    display: inline-block;
+    background-color: white;
+    border: 2px groove black;
+    border-radius: 20%;
+    color: black;
+    font-size: 32px;
+    padding: 0;
+    margin: 0 5px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+#letraPosible{
+    background-color: rgb(255, 255, 0);
+}
+
+#letraCorrecta{
+    background-color: rgb(0, 255, 0);
+}
+
+button{
+    background-color: #fa8b2a;
+    color:#0b2743;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px white;
+    height: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+}
+
+button:disabled{
+    background-color: #9c6331;
+}
+
+#nombre{
+    height: 32px;
+    text-align: center;
+}
+
+#wordle{
+    padding-bottom: 50px;
+}
+
+#chaosExplosion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrarla en la página*/
+    z-index: 10; /*arriba de todo*/
+}
+
+.ventana-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrarla en la página*/
+    background-color: #fa8b2a;
+    padding: 20px;
+    display: none;
+    width: 40vw;
+    max-height: 40vw;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: #c56613;
+    border-style: double;
+    border-width: 10px;
+    z-index: 9; /*arriba los elentos de la página*/
+  }
+  
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer; /*cambia el cursor a la manito*/
+  }
+
+  @media screen and (max-width:550px) {
+    .ventana-flotante {
+        width: 80vw;
+        max-height: 80vw;
+      }
+      /*ajustes de ventana para resoluciones mas chicas*/
+    }
