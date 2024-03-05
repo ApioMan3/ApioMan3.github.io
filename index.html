@@ -6,43 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Ball Z</title>
     <link rel="stylesheet" href="css/mainstyle.css">
-    <link rel="stylesheet" href="css/wordle.css">
+    <link rel="stylesheet" href="css/inicio.css">
     <link rel="icon" href="img/dragondle/logo.png" type="image/png">
 </head>
 
 <body>
     <div id="header"></div>
     <div id="contenido">
-        <div id="Dragondle">
-            <img id="ImagenPJ" src="img/dragondle/logo.png">
-            <h2 id="NombrePJ">Dragondle</h2>
-            <p id="descripcionPJ">El juego consiste en adivinar un personaje de 5 letras perteneciente al mundo de Dragon Ball.</p>
-            <button onclick="mostrarVentana()">¿Como jugar?</button><br>
-            <form name=formulario action="#" method="post">
-            <input type="text" name="nombre" id="nombre" autocomplete="off">
-            <button type="button" id="boton" onclick="enviarPersonaje()">¡Adivinar!</button>
-            </form>
-            <p id="error">&nbsp;</p>
+        <h1>Bienvenido al sitio definitivo de DBZ</h1>
+        <h2>Elige tu ocio</h2>
+        <div id="divJuego" class="ocioizq" onclick="irAPagina('battle.html')">
+            <div id="img"><img src="img/index/battle.png" alt=""></div>
+            <div id="texto"><p>¡Prepárate para el épico enfrentamiento entre Goku y Piccolo en el Torneo de las Artes Marciales! Únete a la batalla más intensa del universo Dragon Ball y descubre quién será el ganador definitivo en esta lucha por la supremacía.</p></div>
         </div>
-        <div id="wordle">
-    </div>
-    
-    <div id="miDiv" class="ventana-flotante">
-        <button class="cerrar" onclick="cerrarVentana()">Cerrar</button>
-        <h2>Como jugar</h2>
-        <p>&nbsp;En Dragondle tenés 6 intentos para intentar adivinar un personaje al azar de 5 carácteres perteneciente al mundo de Dragon Ball.</p>
-        <div id="juego"><span id=letra>R</span><span id=letraCorrecta>O</span><span id=letra>S</span><span id=letra>H</span><span id=letra>I</span></div>
-        <p>&nbsp;Una letra en color verde significa que el carácter está en el nombre y en su posición correcta.</p>
-        <div id="juego"><span id=letra>D</span><span id=letra>I</span><span id=letra>S</span><span id=letra>P</span><span id=letraPosible>O</span></div>
-        <p>&nbsp;Una letra en color amarillo significa que el carácter está en el nombre pero no en su posición correcta.</p>
-        <div id="juego"> <span id=letra>B</span><span id=letra>L</span><span id=letra>A</span><span id=letra>C</span><span id=letra>K</span></div>
-        <p>&nbsp;Una letra en color blanco significa que el carácter no está en el nombre.</p>
-      </div>
+        
+        <div id="divJuego" class="ocioder" onclick="irAPagina('memory.html')">
+            <div id="texto"><p>¿Crees que tienes una memoria excelente? Pon a prueba tus habilidades en nuestro desafiante juego de memoria de Dragon Ball. ¡Encuentra las parejas de personajes en el menor tiempo posible y demuestra que eres un verdadero fan!</p></div>
+            <div id="img"><img src="img/index/memory.png" alt=""></div>
+        </div>
+        
+        <div id="divJuego" class="ocioizq" onclick="irAPagina('dragondle.html')">
+            <div id="img"><img src="img/index/wordle.png" alt=""></div>
+            <div id="texto"><p>¿Te gustan los desafíos de palabras? ¡Entonces te encantará DragonDle! Adivina el nombre del personaje de Dragon Ball oculto detrás de las letras. ¡Pero cuidado, cada error te acerca más a la derrota!</p></div>
+        </div>
+        
+        <div id="divJuego" class="ocioder" onclick="irAPagina('quiz.html')">
+            <div id="texto"><p>¡Prepárate para un gran desafío! Nuestro quiz sobre Dragon Ball pondrá a prueba tu conocimiento de la serie. Responde preguntas sobre personajes, técnicas y eventos para demostrar que eres el maestro de Dragon Ball.</p></div>
+            <div id="img"><img src="img/index/quiz.png" alt=""></div>
+        </div>
+        
+        <div id="divJuego" class="ocioizq" onclick="irAPagina('creator.html')">
+            <div id="img"><img src="img/index/cac.png" alt=""></div>
+            <div id="texto"><p>¡Da rienda suelta a tu imaginación y crea tu propio personaje de Dragon Ball! Con nuestro Creador de Personajes, puedes diseñar un luchador único personalizando su aspecto.</p></div>
+        </div>
+
+        <script>
+            function irAPagina(url) {
+                window.location.href = url;
+            }
+        </script>
     </div>
     <div id="espaciado"></div>
     <div id="footer"></div>
     <script src="js/headfoot.js"></script>
-    <script src="js/wordle.js"></script>
 </body>
 
 </html>

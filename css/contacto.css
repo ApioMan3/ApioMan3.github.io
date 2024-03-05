@@ -1,40 +1,35 @@
+#contact {
+    display: flex;
+    
+}
 #contFormulario {
-    max-width: 500px; /* Ajusta el ancho máximo del formulario según sea necesario */
-    margin: 0 auto; /* Centra el formulario horizontalmente */
+    max-width: 500px; 
+    margin: 0 auto;
 }
 
 #contFormulario input,
 #contFormulario textarea {
-    display: block; /* Hace que los elementos de entrada y el área de texto aparezcan uno encima del otro */
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    margin-bottom: 10px; /* Agrega un espacio entre cada campo */
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; 
 }
 
 #comentario {
-    height: 100px; /* Ajusta la altura del área de texto para dejar un mensaje */
+    height: 100px;
 }
 #contFormulario input[type="text"] {
-    border: 2px solid orange; /* Borde de 2px sólido de color naranja */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 10px; /* Espacio interno */
-    margin-bottom: 15px; /* Margen inferior */
-    font-family: Arial, sans-serif; /* Fuente */
-    font-size: 16px; /* Tamaño de la fuente */
-    color: #333; /* Color del texto */
+    border: 2px solid orange;
+    border-radius: 8px; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333; 
 }
 
 #contFormulario input[type="text"]:focus {
-    outline: none; /* Eliminar el contorno al enfocar */
-    border-color: red; /* Cambiar el color del borde al enfocar */
-}
-
-#contFormulario input[type="text"]::placeholder {
-    color: #999; /* Color del texto de marcador de posición */
-}
-
-#contFormulario input[type="text"][name="comentario"] {
-    height: 100px; /* Altura específica para el campo de comentario */
-    resize: vertical; /* Permitir el redimensionamiento vertical */
+    outline: none;
+    border-color: red;
 }
 
 button {
@@ -48,6 +43,7 @@ button {
     padding-right: 10px;
     border-radius: 10%;
     margin: 5px;
+    margin-bottom: 70px;
 }
 
 button:disabled {
@@ -60,4 +56,13 @@ button:enabled:hover{
 
 button:disabled:hover {
     background-color: #b8783f;
+}
+
+#SSJVegeta {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+#SSJGoku {
+    margin-top: 100px;
+    margin-right: 20px;
 }

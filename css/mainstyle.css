@@ -61,6 +61,8 @@ body::-webkit-scrollbar {
 }
 
 #contenido{
+    display: block;
+    text-align: center;
     flex:1;
     margin-bottom: 60px;
 }

@@ -113,14 +113,22 @@ function introducirPersonaje(){
     letra4.innerText = ingreso[3];
     letra5.innerText = ingreso[4];
 
+    //comprobación de cada letra para evitar repetirla en los otros chequeos
+    if (ingreso[0] == nombrepjRandom[0]){var letra1encontrada = true;}else{var letra1encontrada = false;}
+    if (ingreso[1] == nombrepjRandom[1]){var letra2encontrada = true;}else{var letra2encontrada = false;}
+    if (ingreso[2] == nombrepjRandom[2]){var letra3encontrada = true;}else{var letra3encontrada = false;}
+    if (ingreso[3] == nombrepjRandom[3]){var letra4encontrada = true;}else{var letra4encontrada = false;}
+    if (ingreso[4] == nombrepjRandom[4]){var letra5encontrada = true;}else{var letra5encontrada = false;}
+
+
     //letra 1
     if (ingreso[0] == nombrepjRandom[0]) {
         letra1.id = "letraCorrecta"
     }
-    else if (ingreso[0] == nombrepjRandom[1] ||
-        ingreso[0] == nombrepjRandom[2] ||
-        ingreso[0] == nombrepjRandom[3] ||
-        ingreso[0] == nombrepjRandom[4]) {
+    else if ((ingreso[0] == nombrepjRandom[1] && !letra2encontrada) ||
+        (ingreso[0] == nombrepjRandom[2] && !letra3encontrada) ||
+        (ingreso[0] == nombrepjRandom[3] && !letra4encontrada) ||
+        (ingreso[0] == nombrepjRandom[4] && !letra5encontrada)) {
         letra1.id = "letraPosible"
     } else {
         letra1.id = "letra";
@@ -130,10 +138,10 @@ function introducirPersonaje(){
     if (ingreso[1] == nombrepjRandom[1]) {
         letra2.id = "letraCorrecta"
     }
-    else if (ingreso[1] == nombrepjRandom[0] ||
-        ingreso[1] == nombrepjRandom[2] ||
-        ingreso[1] == nombrepjRandom[3] ||
-        ingreso[1] == nombrepjRandom[4]) {
+    else if ((ingreso[1] == nombrepjRandom[0] && !letra1encontrada)||
+        (ingreso[1] == nombrepjRandom[2] && !letra3encontrada) ||
+        (ingreso[1] == nombrepjRandom[3] && !letra4encontrada) ||
+        (ingreso[1] == nombrepjRandom[4] && !letra5encontrada)) {
         letra2.id = "letraPosible"
     } else {
         letra2.id = "letra";
@@ -143,10 +151,10 @@ function introducirPersonaje(){
     if (ingreso[2] == nombrepjRandom[2]) {
         letra3.id = "letraCorrecta"
     }
-    else if (ingreso[2] == nombrepjRandom[0] ||
-        ingreso[2] == nombrepjRandom[1] ||
-        ingreso[2] == nombrepjRandom[3] ||
-        ingreso[2] == nombrepjRandom[4]) {
+    else if ((ingreso[2] == nombrepjRandom[0] && !letra1encontrada) ||
+        (ingreso[2] == nombrepjRandom[1] && !letra2encontrada) ||
+        (ingreso[2] == nombrepjRandom[3] && !letra4encontrada) ||
+        (ingreso[2] == nombrepjRandom[4] && !letra5encontrada)) {
         letra3.id = "letraPosible"
     } else {
         letra3.id = "letra";
@@ -156,10 +164,10 @@ function introducirPersonaje(){
     if (ingreso[3] == nombrepjRandom[3]) {
         letra4.id = "letraCorrecta"
     }
-    else if (ingreso[3] == nombrepjRandom[0] ||
-        ingreso[3] == nombrepjRandom[1] ||
-        ingreso[3] == nombrepjRandom[2] ||
-        ingreso[3] == nombrepjRandom[4]) {
+    else if ((ingreso[3] == nombrepjRandom[0] && !letra1encontrada) ||
+        (ingreso[3] == nombrepjRandom[1] && !letra2encontrada) ||
+        (ingreso[3] == nombrepjRandom[2] && !letra3encontrada) ||
+        (ingreso[3] == nombrepjRandom[4] && !letra5encontrada)) {
         letra4.id = "letraPosible"
     } else {
         letra4.id = "letra";
@@ -169,10 +177,10 @@ function introducirPersonaje(){
     if (ingreso[4] == nombrepjRandom[4]) {
         letra5.id = "letraCorrecta"
     }
-    else if (ingreso[4] == nombrepjRandom[0] ||
-        ingreso[4] == nombrepjRandom[1] ||
-        ingreso[4] == nombrepjRandom[2] ||
-        ingreso[4] == nombrepjRandom[3]) {
+    else if ((ingreso[4] == nombrepjRandom[0] && !letra1encontrada) ||
+        (ingreso[4] == nombrepjRandom[1] && !letra2encontrada) ||
+        (ingreso[4] == nombrepjRandom[2] && !letra3encontrada) ||
+        (ingreso[4] == nombrepjRandom[3]) && !letra4encontrada) {
         letra5.id = "letraPosible"
     } else {
         letra5.id = "letra";

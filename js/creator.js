@@ -34,7 +34,9 @@ var listaCabeza = [
     { imagen: "img/cac/head/033.png" },
     { imagen: "img/cac/head/034.png" },
     { imagen: "img/cac/head/035.png" },
-    { imagen: "img/cac/head/036.png" }
+    { imagen: "img/cac/head/036.png" },
+    { imagen: "img/cac/head/037.png" },
+    { imagen: "img/cac/head/038.png" }
 ];
 
 var listaPant = [
@@ -50,7 +52,9 @@ var listaPant = [
     { imagen: "img/cac/pant/010.png" },
     { imagen: "img/cac/pant/011.png" },
     { imagen: "img/cac/pant/012.png" },
-    { imagen: "img/cac/pant/013.png" }
+    { imagen: "img/cac/pant/013.png" },
+    { imagen: "img/cac/pant/014.png" },
+    { imagen: "img/cac/pant/015.png" }
 ];
 
 var listaBody = [
@@ -72,7 +76,11 @@ var listaBody = [
     { imagen: "img/cac/body/016.png" },
     { imagen: "img/cac/body/017.png" },
     { imagen: "img/cac/body/018.png" },
-    { imagen: "img/cac/body/019.png" }
+    { imagen: "img/cac/body/019.png" },
+    { imagen: "img/cac/body/020.png" },
+    { imagen: "img/cac/body/021.png" },
+    { imagen: "img/cac/body/022.png" },
+    { imagen: "img/cac/body/023.png" }
 ];
 
 let pos = [0, 0, 0];

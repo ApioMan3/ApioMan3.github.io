@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/memory2.css">
+    <link rel="icon" href="img/card.png" type="image/png">
+    <script src="js/memory2.js" defer></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="contenido">
+        <h1>Felicidades guerrero</h1>
+        <h1 class="mensaje" id="titulo">Ha superado el desafio</h2>
+        <img src="img/memorama2/Victoria.png">
+        <div id="contenedor">
+            <button id="boton1" onclick="irAPagina('index.html')">Ir al inicio</button>
+            <button id="boton2" onclick="irAPagina('memory.html')">Jugar de nuevo</button>
+        </div>
+    </div>
+    <script>
+        function irAPagina(url) {
+            window.location.href = url;
+        }
+    </script>
+    <div id="espaciado"></div>
+    <div id="footer"></div>
+    <script src="js/headfoot.js"></script>
+</body>
+
+</html>
