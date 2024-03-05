@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragondle</title>
+    <link rel="stylesheet" href="css/mainstyle.css" />
+    <link rel="stylesheet" href="css/wordle.css" />
+    <link rel="icon" href="img/dragondle/logo.png" type="image/png" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Ball Z</title>
-    <link rel="stylesheet" href="css/mainstyle.css">
-    <link rel="stylesheet" href="css/wordle.css">
-    <link rel="icon" href="img/dragondle/logo.png" type="image/png">
-</head>
-
-<body>
+  <body>
     <div id="header"></div>
     <div id="contenido">
-        <div id="Dragondle">
-            <img id="ImagenPJ" src="img/dragondle/logo.png">
-            <h2 id="NombrePJ">Dragondle</h2>
-            <p id="descripcionPJ">El juego consiste en adivinar un personaje de 5 letras perteneciente al mundo de Dragon Ball.</p>
-            <button onclick="mostrarVentana()">¿Como jugar?</button><br>
-            <form name=formulario action="#" method="post">
-            <input type="text" name="nombre" id="nombre" autocomplete="off">
-            <button type="button" id="boton" onclick="enviarPersonaje()">¡Adivinar!</button>
-            </form>
-            <p id="error">&nbsp;</p>
-        </div>
-        <div id="wordle">
-    </div>
-    
-    <div id="miDiv" class="ventana-flotante">
+      <div id="Dragondle">
+        <img id="Imagen" src="img/dragondle/DRAGONDLE.png" />
+        <h2 id="NombrePJ">¡Bievenido al Dragondle!</h2>
+        <p id="descripcionPJ">
+          El juego consiste en adivinar un personaje de 5 letras perteneciente
+          al mundo de Dragon Ball.
+        </p>
+        <button id="ayuda" onclick="mostrarVentana()">¿Como jugar?</button
+        ><br />
+        <form name="formulario" action="#" method="post">
+          <input type="text" name="nombre" id="nombre" autocomplete="off" />
+          <button type="button" id="boton" onclick="enviarPersonaje()">
+            ¡Adivinar!
+          </button>
+        </form>
+        <p id="error">&nbsp;</p>
+      </div>
+      <div id="wordle"></div>
+
+      <div id="miDiv" class="ventana-flotante">
         <button class="cerrar" onclick="cerrarVentana()">Cerrar</button>
         <h2>Como jugar</h2>
-        <p>&nbsp;En Dragondle tenés 6 intentos para intentar adivinar un personaje al azar de 5 carácteres perteneciente al mundo de Dragon Ball.</p>
-        <div id="juego"><span id=letra>R</span><span id=letraCorrecta>O</span><span id=letra>S</span><span id=letra>H</span><span id=letra>I</span></div>
-        <p>&nbsp;Una letra en color verde significa que el carácter está en el nombre y en su posición correcta.</p>
-        <div id="juego"><span id=letra>D</span><span id=letra>I</span><span id=letra>S</span><span id=letra>P</span><span id=letraPosible>O</span></div>
-        <p>&nbsp;Una letra en color amarillo significa que el carácter está en el nombre pero no en su posición correcta.</p>
-        <div id="juego"> <span id=letra>B</span><span id=letra>L</span><span id=letra>A</span><span id=letra>C</span><span id=letra>K</span></div>
-        <p>&nbsp;Una letra en color blanco significa que el carácter no está en el nombre.</p>
+        <p>
+          &nbsp;En Dragondle tenés 6 intentos para intentar adivinar un
+          personaje al azar de 5 carácteres perteneciente al mundo de Dragon
+          Ball.
+        </p>
+        <div class="juego">
+          <span class="letra">R</span><span class="letraCorrecta">O</span
+          ><span class="letra">S</span><span class="letra">H</span
+          ><span class="letra">I</span>
+        </div>
+        <p>
+          &nbsp;Una letra en color verde significa que el carácter está en el
+          nombre y en su posición correcta.
+        </p>
+        <div class="juego">
+          <span class="letra">D</span><span class="letra">I</span
+          ><span class="letra">S</span><span class="letra">P</span
+          ><span class="letraPosible">O</span>
+        </div>
+        <p>
+          &nbsp;Una letra en color amarillo significa que el carácter está en el
+          nombre pero no en su posición correcta.
+        </p>
+        <div class="juego">
+          <span class="letra">B</span><span class="letra">L</span
+          ><span class="letra">A</span><span class="letra">C</span
+          ><span class="letra">K</span>
+        </div>
+        <p>
+          &nbsp;Una letra en color blanco significa que el carácter no está en
+          el nombre.
+        </p>
       </div>
     </div>
     <div id="espaciado"></div>
     <div id="footer"></div>
     <script src="js/headfoot.js"></script>
     <script src="js/wordle.js"></script>
-</body>
-
+  </body>
 </html>

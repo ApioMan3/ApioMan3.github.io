@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dragon Ball Z</title>
+    <title>Torneo</title>
     <link rel="stylesheet" href="css/mainstyle.css" />
     <link rel="stylesheet" href="css/battle.css" />
     <script src="js/battle.js" defer></script>
@@ -12,24 +12,24 @@
 
   <body>
     <div id="header"></div>
-    <div id="contenedor">
+    <div class="contenedor">
       <div id="arena">
         <img id="pelea" src="img/arena/start.png" />
       </div>
     </div>
 
-    <div id="contenedor">
+    <div class="contenedor">
       <span id="volumen" onclick="cambiarVolumen()">🔈</span
       ><span id="ayuda" onclick="mostrarVentana()">❔</span>
     </div>
 
-    <div id="contenedor">
+    <div class="contenedor">
       <button id="mapaizq" onclick="mapaIzquierda()">&#x2B05;</button>
       <button id="iniciar" onclick="iniciarPelea()">Iniciar pelea</button>
       <button id="mapader" onclick="mapaDerecha()">&#x27A1;</button>
     </div>
 
-    <div id="contenedor">
+    <div class="contenedor">
       <button id="atkgoku" onclick="ataqueGoku()">Ataque de Goku</button>
       <button id="atkpiccolo" onclick="ataquePiccolo()">
         Ataque de Piccolo

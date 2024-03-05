@@ -12,7 +12,7 @@
     border-style: outset;
 }
 
-#contenedor {
+.contenedor {
     display: flex;
     align-items: center;
     align-content: center;

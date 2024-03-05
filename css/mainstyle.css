@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
 }
 
 #footer div:hover {
-    background-color: #238636;
+    background-color: rgb(255, 101, 0);
     border-radius: 10px; 
 }
 

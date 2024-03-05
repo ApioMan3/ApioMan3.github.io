@@ -12,7 +12,7 @@
     border-style: outset;
 }
 
-#contenedor {
+.contenedor {
     position: relative;
     display: flex;
     align-items: center;
@@ -23,19 +23,19 @@
     justify-content: center;
 }
 
-#contenedor h1{
+.contenedor h1{
     margin-top: -5px;
     margin-bottom: -5px;
 }
 
-#contenedor img {
+.contenedor img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#linea {
+.linea {
     display: flex;
     align-items: center;
     align-content: center;
@@ -45,7 +45,7 @@
     justify-content: center;
 }
 
-#linea span{
+.linea span{
     color: #000000;
     font-size: 16px;
     font-weight: bolder;
