@@ -2,6 +2,7 @@
 var music = new Audio("img/arena/audio/music.mp3");
 var ki = new Audio("img/arena/audio/carga.mp3");
 music.loop = true;
+music.volume = 0;
 var listaMapas = [
   { nombre: "Torneo de las Artes Marciales", imagen: "img/arena/arenas/0.gif" },
   { nombre: "Yermos", imagen: "img/arena/arenas/1.gif" },
@@ -75,7 +76,6 @@ function ataqueGoku() {
   if (kigoku >= 10) {
     goku.play();
     desactivarBotones();
-    console.log(kigoku);
     var img = document.getElementById("pelea");
     img.src = "img/arena/ataquegoku.gif" + "?x=" + Date.now(); //El date es para recargar el gif generando una nueva URL para el mismo
 
@@ -211,7 +211,6 @@ function cambiarVolumen() {
   localStorage.setItem("gokuVolume", goku.volume);
   localStorage.setItem("piccoloVolume", piccolo.volume);
   localStorage.setItem("kiVolume", ki.volume);
-  console.log("Guardado");
 }
 
 function mostrarVentana() {

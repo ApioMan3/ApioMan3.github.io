@@ -5,7 +5,7 @@ let personajes = document.createElement("div");
 let contacto = document.createElement("div");
 
 inicio.innerHTML = '<a href="index.html">Inicio</a>';
-personajes.innerHTML = '<a href="characters.html">Info</a>';
+personajes.innerHTML = '<a href="characters.html">Información</a>';
 contacto.innerHTML = '<a href="contact.html">Contacto</a>';
 
 header.appendChild(inicio);

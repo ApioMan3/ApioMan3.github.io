@@ -18,38 +18,38 @@ var mostrarAciertos = document.getElementById("contador_aciertos")
 var record;
 var mostrarRecord = document.getElementById("record");
 var imagenes = [
-    "img/memorama2/001.png",
-"img/memorama2/001.png",
-"img/memorama2/002.png",
-"img/memorama2/002.png",
-"img/memorama2/003.png",
-"img/memorama2/003.png",
-"img/memorama2/004.png",
-"img/memorama2/004.png",
-"img/memorama2/005.png",
-"img/memorama2/005.png",
-"img/memorama2/006.png",
-"img/memorama2/006.png",
-"img/memorama2/007.png",
-"img/memorama2/007.png",
-"img/memorama2/008.png",
-"img/memorama2/008.png",
-"img/memorama2/009.png",
-"img/memorama2/009.png",
-"img/memorama2/010.png",
-"img/memorama2/010.png",
-"img/memorama2/011.png",
-"img/memorama2/011.png",
-"img/memorama2/012.png",
-"img/memorama2/012.png",
-"img/memorama2/013.png",
-"img/memorama2/013.png",
-"img/memorama2/014.png",
-"img/memorama2/014.png",
-"img/memorama2/015.png",
-"img/memorama2/015.png",
-"img/memorama2/016.png",
-"img/memorama2/016.png"
+    "img/memorama/broly.png",
+    "img/memorama/broly.png",
+    "img/memorama/bulma.jpg",
+    "img/memorama/bulma.jpg",
+    "img/memorama/freezer.jpg",
+    "img/memorama/freezer.jpg",
+    "img/memorama/ginyu.jpg",
+    "img/memorama/ginyu.jpg",
+    "img/memorama/goham.jpg",
+    "img/memorama/goham.jpg",
+    "img/memorama/goku.png",
+    "img/memorama/goku.png",
+    "img/memorama/gokua.jpg",
+    "img/memorama/gokua.jpg",
+    "img/memorama/karin.png",
+    "img/memorama/karin.png",
+    "img/memorama/krillin.png",
+    "img/memorama/krillin.png",
+    "img/memorama/nappa.jpg",
+    "img/memorama/nappa.jpg",
+    "img/memorama/olibu.png",
+    "img/memorama/olibu.png",
+    "img/memorama/piccolo.jpg",
+    "img/memorama/piccolo.jpg",
+    "img/memorama/pizza.png",
+    "img/memorama/pizza.png",
+    "img/memorama/satan.jpg",
+    "img/memorama/satan.jpg",
+    "img/memorama/vegeta.jpg",
+    "img/memorama/vegeta.jpg",
+    "img/memorama/videl.jpg",
+    "img/memorama/videl.jpg",
 ]
 var imagenesJuego = []
 var comienzo;
@@ -164,7 +164,7 @@ function destapar(id) {
             if(aciertos==16){
                 clearInterval(comienzo);
                 window.location.href = 'ganaste.html';
-                record = min_aux + ":" + seg_aux;
+                record = min_aux + ":" + seg_aux.toString().padStart(2, "0");
                 localStorage.setItem("ultimo_record", record);
             }
         } else {
@@ -174,8 +174,8 @@ function destapar(id) {
             }, 750)
 
             setTimeout(() => {
-                tarjeta1.style.backgroundImage = 'url(img/card.png )';
-                tarjeta2.style.backgroundImage = 'url(img/card.png )';
+                tarjeta1.style.backgroundImage = 'url(img/memorama/card.png )';
+                tarjeta2.style.backgroundImage = 'url(img/memorama/card.png )';
                 tarjeta1.style.border = '';
                 tarjeta2.style.border = '';
                 tarjeta1.disabled = false;
