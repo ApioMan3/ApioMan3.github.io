@@ -186,5 +186,7 @@ function destapar(id) {
         }
         tarjetasDestapadas = 0;
     }
+}else{
+    
 }
 }

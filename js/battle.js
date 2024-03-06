@@ -105,6 +105,7 @@ function recargar() {
   ki.play();
   var img = document.getElementById("pelea");
   img.src = "img/arena/carga.gif";
+  var iniciar = document.getElementById("iniciar");
   setTimeout(standby, 3000);
 
   //Generación de recuperación al azar.
