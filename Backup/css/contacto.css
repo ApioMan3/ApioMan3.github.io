@@ -1,0 +1,68 @@
+#contact {
+    display: flex;
+    
+}
+#contFormulario {
+    max-width: 500px; 
+    margin: 0 auto;
+}
+
+#contFormulario input,
+#contFormulario textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+#comentario {
+    height: 100px;
+}
+#contFormulario input[type="text"] {
+    border: 2px solid orange;
+    border-radius: 8px; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333; 
+}
+
+#contFormulario input[type="text"]:focus {
+    outline: none;
+    border-color: red;
+}
+
+button {
+    background-color: #fa8b2a;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px white;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+    margin: 5px;
+    margin-bottom: 70px;
+}
+
+button:disabled {
+    background-color: #9c6331;
+}
+
+button:enabled:hover{
+    background-color: rgba(255, 165, 0);
+}
+
+button:disabled:hover {
+    background-color: #b8783f;
+}
+
+#SSJVegeta {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+#SSJGoku {
+    margin-top: 100px;
+    margin-right: 20px;
+}

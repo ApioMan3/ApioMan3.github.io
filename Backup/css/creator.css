@@ -1,0 +1,71 @@
+#cac {
+    width: 168px;
+    height: 246px;
+    background-image: url("../img/cac/fondo.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px;
+    border-color: black;
+    border-style: outset;
+}
+
+.contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.contenedor h1{
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.contenedor img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.linea {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.linea span{
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    padding-left: 5px;
+    size: 200px;
+}
+
+button {
+    background-color: #fa8b2a;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px white;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+    margin: 5px;
+}
+
+button:enabled:hover{
+    background-color: rgba(255, 165, 0);
+}

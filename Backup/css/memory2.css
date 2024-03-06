@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Saiyan Sans";
+  src: url("../font/SS.ttf") format("trueType");
+}
+
+@font-face {
+  font-family: "Instruction";
+  src: url("../font/InstructionBold.otf") format(".otf");
+}
+
+.mensaje {
+  display: flexbox;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Saiyan Sans";
+  color: red;
+  text-align: center;
+  font-size: 38px;
+  font-weight: lighter;
+  font-stretch: extra-expanded;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  border: 2px solid black;
+}
+
+button {
+  background-color: #fa8b2a;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bolder;
+  text-shadow: -1px 1px white;
+  height: 42px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10%;
+  margin: 5px;
+}
+
+button:enabled:hover {
+  background-color: rgba(255, 165, 0);
+}
+
+@media screen and (max-width:600px) {
+  img {
+    width: 80%;
+  }
+}

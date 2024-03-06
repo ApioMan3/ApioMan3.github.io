@@ -1,0 +1,142 @@
+#arena {
+    width: 512px;
+    height: 256px;
+    background-image: url("../img/arena/arenas/0.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px;
+    border-color: black;
+    border-style: outset;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+button {
+    background-color: #fa8b2a;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: -1px 1px white;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+    margin: 5px;
+}
+
+button:disabled {
+    background-color: #9c6331;
+}
+
+button:enabled:hover{
+    background-color: rgba(255, 165, 0);
+}
+
+button:disabled:hover {
+    background-color: #b8783f;
+}
+
+#status {
+    display: flex;
+    /* Para colocar los div en una misma línea */
+    justify-content: center;
+    text-shadow: -1px 1px white;
+}
+
+#status1,
+#status2 {
+    background-color: #fa8b2a;
+    padding: 10px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-style: solid;
+    margin-right: 70px;
+    margin-left: 70px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+p {
+    font-size: 18px;
+    margin: 0px;
+}
+
+#vidagoku,
+#kigoku,
+#vidapiccolo,
+#kipiccolo {
+    font-weight: normal;
+}
+
+#ayuda, #volumen {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+    background-color: #fa8b2a;
+    border-radius: 30px;
+    border-width: 3px;
+    border-style: solid;
+    text-align: center;
+}
+
+#volumen:hover, #ayuda:hover {
+    shape-outside: margin-box;
+    cursor: default;
+background-color: rgba(255, 165, 0);
+}
+
+.ventana-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para centrarla en la página*/
+    background-color: #fa8b2a;
+    padding: 20px;
+    display: none;
+    width: 40vw;
+    max-height: 40vw;
+    overflow-y: auto;
+    border-radius: 20px;
+    border: #c56613;
+    border-style: double;
+    border-width: 10px;
+    z-index: 9; /*arriba los elentos de la página*/
+  }
+  
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer; /*cambia el cursor a la manito*/
+  }
+
+@media screen and (max-width:550px) {
+
+    #arena,
+    #pelea {
+        width: 95%;
+        height: auto;
+    }
+
+        .ventana-flotante {
+        width: 80vw;
+        max-height: 80vw;
+      }
+}

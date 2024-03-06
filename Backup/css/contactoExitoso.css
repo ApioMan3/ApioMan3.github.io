@@ -1,0 +1,12 @@
+#contenido {
+    text-align: center;
+    justify-content: center;
+}
+
+#imagen {
+    height: 700px;
+    width: 1200px;
+    border: 2px;
+    border-color: black;
+    border-style: outset;
+}
