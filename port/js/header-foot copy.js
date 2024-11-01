@@ -1,14 +1,5 @@
 const toggleMenuOpen = () => document.body.classList.toggle("open");
 
-function smoothScroll(event) {
-  event.preventDefault();
-  const targetId = event.currentTarget.getAttribute("href").substring(1);
-  const targetElement = document.getElementById(targetId);
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
 function generateNavbar() {
   const navbar = document.createElement("nav");
   navbar.classList.add("navbar");
@@ -40,21 +31,21 @@ function generateNavbar() {
 
   // Crear los enlaces del menú
   const links = [
-    { text: "Inicio", href: "#inicio" },
-    { text: "Acerca de mi", href: "#acerca" },
-    { text: "Habilidades", href: "#habilidades" },
-    { text: "Proyectos", href: "#proyectos" }
+    { text: "Inicio", href: "./index.html" },
+    { text: "Sobre mi", href: "./about.html" },
+    { text: "Contacto", href: "./contact.html" },
   ];
+
+  const currentPage = window.location.pathname.split("/").pop();
 
   links.forEach((linkData) => {
     const link = document.createElement("a");
     link.setAttribute("href", linkData.href);
     link.textContent = linkData.text;
-    link.classList.add("active");
-
-    // Añadir evento de desplazamiento suave
-    link.addEventListener("click", smoothScroll);
-
+    link.classList.add("inactive");
+    if (currentPage === linkData.href.split("/").pop()) {
+      link.classList.add("active");
+    }
     menu.appendChild(link);
   });
 

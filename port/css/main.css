@@ -1,11 +1,19 @@
+/* General */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #3b3d43;
+  background-color: #1a1a1a;
+  color: #fafafa;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-padding-top: 64px; /* Adjust scroll for fixed navbar */
 }
 
+/* Button Reset */
 button {
   border: 0;
   padding: 0;
@@ -15,6 +23,7 @@ button {
   cursor: pointer;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   z-index: 2;
@@ -25,19 +34,13 @@ button {
   justify-content: center;
   width: 100%;
   height: 64px;
-  background: #19191c;
+  background: #7b6192;
   color: #f9f9f9;
   font-family: "Poppins";
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 600px) {
-  .navbar {
-    justify-content: space-between;
-    padding: 0 0 0 16px;
-  }
-}
-
+/* Navbar Overlay */
 .navbar-overlay {
   position: fixed;
   z-index: 2;
@@ -56,32 +59,7 @@ body.open .navbar-overlay {
   opacity: 1;
 }
 
-main{
-  padding-top: 64px;
-}
-
-.footer {
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 48px;
-  background: #19191c;
-  color: #f9f9f9;
-  font-family: "Poppins";
-  box-sizing: border-box;
-}
-
-@media only screen and (min-width: 600px) {
-  .navbar-overlay {
-    display: none;
-  }
-}
-
+/* Navbar Burger */
 .navbar-burger {
   position: absolute;
   top: 0;
@@ -93,17 +71,14 @@ main{
   padding: 0;
 }
 
-@media only screen and (min-width: 600px) {
-  .navbar-burger {
-    display: none;
-  }
-}
-
+/* Navbar Title */
 .navbar-title {
   margin: 0;
   font-size: 16px;
+  color: #fff;
 }
 
+/* Navbar Menu */
 .navbar-menu {
   position: fixed;
   z-index: 3;
@@ -127,7 +102,7 @@ body.open .navbar-menu {
   visibility: visible;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .navbar-menu {
     position: static;
     translate: 0 0;
@@ -135,6 +110,15 @@ body.open .navbar-menu {
     background: transparent;
     flex-direction: row;
     visibility: visible;
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 16px;
   }
 }
 
@@ -145,12 +129,134 @@ body.open .navbar-menu {
   text-decoration: none;
 }
 
-.navbar-menu > a.active {
-  color: white;
-}
-
+.navbar-menu > a.active,
 .navbar-menu > a:hover {
-  color: rgb(255, 255, 255);
+  color: white;
   transition: all 0.3s ease;
 }
 
+/* Main Content */
+main {
+  padding-top: 64px;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  background: #19191c;
+  color: #f9f9f9;
+  font-family: "Poppins";
+}
+
+/* Fixed Button */
+.fixed-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.section {
+  max-width: 80%;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 2rem;
+  scroll-margin-top: 64px;
+}
+
+
+.inicio img {
+  border-radius: 50%;
+}
+
+h1, h2, h3 {
+  padding: 1rem;
+  color: #d6a9ff;
+}
+
+.acerca,
+.habilidades {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.acerca {
+  grid-template-columns: 4fr 7fr;
+}
+
+.habilidades {
+  grid-template-columns: 7fr 3fr;
+}
+
+.acerca-img img,
+.habilidades-imagenes .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.habilidades-imagenes {
+  display: grid;
+  grid-template-columns: repeat(6, 64px);
+  gap: 0.2rem;
+  justify-content: center;
+}
+
+.habilidades-imagenes .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background-color: #444444;
+  border-radius: 10px;
+  border: 5px solid #444444;
+}
+
+.proyectos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.proyectos .card {
+  background-color: #333;
+  color: #d0d0ff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 48%;
+  text-align: center;
+}
+
+.proyectos .card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 800px) {
+  .acerca, .habilidades {
+    grid-template-columns: 1fr; 
+  }
+
+  .proyectos .card {
+    width: 100%;
+  }
+}
