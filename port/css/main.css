@@ -9,8 +9,10 @@
 body {
   background-color: #1a1a1a;
   color: #fafafa;
-  scroll-behavior: smooth; /* Smooth scrolling */
-  scroll-padding-top: 64px; /* Adjust scroll for fixed navbar */
+  scroll-behavior: smooth;
+  /* Smooth scrolling */
+  scroll-padding-top: 64px;
+  /* Adjust scroll for fixed navbar */
 }
 
 /* Button Reset */
@@ -102,7 +104,7 @@ body.open .navbar-menu {
   visibility: visible;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 480px) {
   .navbar-menu {
     position: static;
     translate: 0 0;
@@ -122,15 +124,15 @@ body.open .navbar-menu {
   }
 }
 
-.navbar-menu > a {
+.navbar-menu>a {
   color: rgba(255, 255, 255, 0.5);
   background: transparent;
   padding: 0 8px;
   text-decoration: none;
 }
 
-.navbar-menu > a.active,
-.navbar-menu > a:hover {
+.navbar-menu>a.active,
+.navbar-menu>a:hover {
   color: white;
   transition: all 0.3s ease;
 }
@@ -182,7 +184,9 @@ main {
   border-radius: 50%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   padding: 1rem;
   color: #d6a9ff;
 }
@@ -251,9 +255,11 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 600px) {
-  .acerca, .habilidades {
-    grid-template-columns: 1fr; 
+@media only screen and (max-width: 480px) {
+
+  .acerca,
+  .habilidades {
+    grid-template-columns: 1fr;
   }
 
   .proyectos .card {
