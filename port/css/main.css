@@ -102,7 +102,7 @@ body.open .navbar-menu {
   visibility: visible;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .navbar-menu {
     position: static;
     translate: 0 0;
@@ -251,7 +251,7 @@ h1, h2, h3 {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .acerca, .habilidades {
     grid-template-columns: 1fr; 
   }
