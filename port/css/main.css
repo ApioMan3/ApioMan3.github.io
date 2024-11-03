@@ -3,19 +3,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins";
 }
 
 body {
   background-color: #1a1a1a;
   color: #fafafa;
   scroll-behavior: smooth;
-  /* Smooth scrolling */
+
   scroll-padding-top: 64px;
-  /* Adjust scroll for fixed navbar */
+
 }
 
-/* Button Reset */
+
 button {
   border: 0;
   padding: 0;
@@ -38,7 +38,6 @@ button {
   height: 64px;
   background: #7b6192;
   color: #f9f9f9;
-  font-family: "Poppins";
   box-sizing: border-box;
 }
 
@@ -50,7 +49,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: #00000080;
   visibility: hidden;
   opacity: 0;
   transition: 0.3s;
@@ -104,28 +103,10 @@ body.open .navbar-menu {
   visibility: visible;
 }
 
-@media only screen and (min-width: 600px) {
-  .navbar-menu {
-    position: static;
-    translate: 0 0;
-    width: auto;
-    background: transparent;
-    flex-direction: row;
-    visibility: visible;
-  }
 
-  .navbar-burger {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: space-between;
-    padding: 0 16px;
-  }
-}
 
 .navbar-menu>a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
   background: transparent;
   padding: 0 8px;
   text-decoration: none;
@@ -211,7 +192,7 @@ h3 {
 .habilidades-imagenes .icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .habilidades-imagenes {
@@ -227,9 +208,9 @@ h3 {
   align-items: center;
   width: 64px;
   height: 64px;
-  background-color: #444444;
+  background-color: #ece2f7;
   border-radius: 10px;
-  border: 5px solid #444444;
+  border: 5px solid #ece2f7;
 }
 
 .proyectos {
@@ -255,7 +236,7 @@ h3 {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
 
   .acerca,
   .habilidades {
@@ -264,5 +245,26 @@ h3 {
 
   .proyectos .card {
     width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 16px;
   }
 }
