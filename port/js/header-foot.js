@@ -79,21 +79,26 @@ const generatedFooter = generateFooter();
 footerContainer.appendChild(generatedFooter);
 
 const images = {
-  gc: ["img/gc/001.png",
-    "img/gc/002.png",
-    "img/gc/003.png",
-    "img/gc/004.png"],
+  gc: [
+    "img/gc/001.jpg",
+    "img/gc/002.jpg",
+    "img/gc/003.jpg",
+    "img/gc/004.jpg",
+    "img/gc/005.jpg",
+    "img/gc/006.jpg",
+    "img/gc/007.jpg"],
+    
   sgu: [
-    "img/SGU/000.jpg",
-    "img/SGU/001.jpg",
-    "img/SGU/002.jpg",
-    "img/SGU/003.jpg",
-    "img/SGU/004.jpg",
-    "img/SGU/005.jpg",
+    "img/sguts/000.jpg",
+    "img/sguts/001.jpg",
+    "img/sguts/002.jpg",
+    "img/sguts/003.jpg",
+    "img/sguts/004.jpg",
+    "img/sguts/005.jpg",
   ],
   sqe: [
-    "img/sqe/001.png",
-    "img/sqe/002.png",
+    "img/sqe/001.jpg",
+    "img/sqe/002.jpg",
   ],
   hpwg: [
     "img/hpwg/001.jpg",
@@ -101,6 +106,13 @@ const images = {
     "img/hpwg/003.jpg",
     "img/hpwg/004.jpg",
     "img/hpwg/005.jpg",
+  ],
+  ta: [
+    "img/ta/000.jpg",
+    "img/ta/001.jpg",
+    "img/ta/002.jpg",
+    "img/ta/003.jpg",
+    "img/ta/004.jpg",
   ],
 };
 
