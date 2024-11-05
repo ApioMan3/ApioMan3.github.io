@@ -235,7 +235,7 @@ h3 {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
   .acerca,
   .habilidades {
@@ -248,7 +248,7 @@ h3 {
 
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .navbar-menu {
     position: static;
     translate: 0 0;
@@ -309,9 +309,9 @@ h3 {
   position: absolute;
   top: 50%;
   font-size: 30px;
-  color: white;
+  color: black;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255,255,255, 0.5);
   border: none;
   padding: 12px;
   border-radius: 50%;
@@ -341,7 +341,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   body {
       overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
       width: 100vw; /* Asegura que el cuerpo tenga el ancho completo de la ventana */
