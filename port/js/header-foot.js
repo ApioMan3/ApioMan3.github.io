@@ -86,3 +86,57 @@ navbarContainer.appendChild(generatedNavbar);
 const footerContainer = document.getElementById("footer-container");
 const generatedFooter = generateFooter();
 footerContainer.appendChild(generatedFooter);
+
+const images = {
+  ga: [
+    "image1-card1.jpg",
+    "image2-card1.jpg",
+    // ... otras imágenes de card1
+  ],
+  sgu: [
+    "img/SGU/001.png",
+    "img/SGU/002.png",
+    "img/SGU/003.png",
+    "img/SGU/004.png",
+    "img/SGU/005.png",
+  ]
+  // Añade más cardN según sea necesario
+};
+
+
+let currentImages = []; // Array de imágenes cargadas en el modal actual
+let currentIndex = 0;   // Índice de la imagen actual
+
+function openModal(cardId) {
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+
+  // Verifica que el arreglo de imágenes existe para el ID proporcionado
+  if (images[cardId]) {
+    currentImages = images[cardId];
+    currentIndex = 0;
+    modalImage.src = currentImages[currentIndex];
+    modal.style.display = "flex"; // Muestra el modal
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+
+function changeImage(direction) {
+  // Cambiar el índice de la imagen actual
+  currentIndex += direction;
+
+  // Validar límites del índice
+  if (currentIndex < 0) {
+    currentIndex = currentImages.length - 1; // Última imagen
+  } else if (currentIndex >= currentImages.length) {
+    currentIndex = 0; // Primera imagen
+  }
+
+  // Actualizar la imagen del modal
+  document.getElementById("modal-image").src = currentImages[currentIndex];
+}
