@@ -10,7 +10,6 @@ body {
   background-color: #1a1a1a;
   color: #fafafa;
   scroll-behavior: smooth;
-
   scroll-padding-top: 64px;
 
 }
@@ -41,7 +40,7 @@ button {
   box-sizing: border-box;
 }
 
-/* Navbar Overlay */
+
 .navbar-overlay {
   position: fixed;
   z-index: 2;
@@ -60,7 +59,7 @@ body.open .navbar-overlay {
   opacity: 1;
 }
 
-/* Navbar Burger */
+
 .navbar-burger {
   position: absolute;
   top: 0;
@@ -72,14 +71,14 @@ body.open .navbar-overlay {
   padding: 0;
 }
 
-/* Navbar Title */
+
 .navbar-title {
   margin: 0;
   font-size: 16px;
   color: #fff;
 }
 
-/* Navbar Menu */
+
 .navbar-menu {
   position: fixed;
   z-index: 3;
@@ -270,7 +269,7 @@ h3 {
 }
 
 .modal {
-  display: none; /* Oculto inicialmente */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -284,8 +283,8 @@ h3 {
 }
 
 .modal-content {
-  max-width: 90%; /* Ajusta a pantallas pequeñas */
-  max-height: 90%; /* Ajusta la altura en pantallas pequeñas */
+  max-width: 90%; 
+  max-height: 90%; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,7 +292,7 @@ h3 {
 
 .modal-image {
   max-width: 100%;
-  max-height: 90vh; /* Ajusta la altura máxima para evitar desbordamiento en pantallas pequeñas */
+  max-height: 90vh; 
   object-fit: contain;
 }
 
@@ -327,10 +326,9 @@ h3 {
   right: 15px;
 }
 
-/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .modal-content {
-    width: 90%; /* Ocupa el 90% del ancho en pantallas pequeñas */
+    width: 90%; 
   }
 
   .close {
@@ -340,5 +338,28 @@ h3 {
   .prev, .next {
     font-size: 24px;
     padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+      overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+      width: 100vw; /* Asegura que el cuerpo tenga el ancho completo de la ventana */
+      margin: 0; /* Elimina márgenes que podrían causar desbordamiento */
+  }
+
+  .modal, .modal-content, .modal-image {
+      max-width: 100%; /* Asegura que el modal no supere el ancho de la pantalla */
+      height: auto; /* Ajusta la altura automáticamente */
+      overflow: hidden; /* Previene que se muestre el scrollbar */
+  }
+
+  .navbar, .footer {
+      width: 100%; /* Asegura que la navbar y el footer ocupen el 100% del ancho */
+      box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho */
+  }
+
+  .proyectos .card {
+      width: 100%; /* Asegura que las tarjetas ocupen el 100% del ancho en móviles */
   }
 }

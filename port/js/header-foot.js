@@ -28,22 +28,19 @@ function generateNavbar() {
   burgerButton.appendChild(burgerIcon);
   navbar.appendChild(burgerButton);
 
-  // Crear el título
   const title = document.createElement("h1");
   title.classList.add("navbar-title");
   title.textContent = "Robinson Winiarczyk";
   navbar.appendChild(title);
 
-  // Crear el menú
   const menu = document.createElement("nav");
   menu.classList.add("navbar-menu");
 
-  // Crear los enlaces del menú
   const links = [
     { text: "Inicio", href: "#inicio" },
     { text: "Acerca de mi", href: "#acerca" },
     { text: "Habilidades", href: "#habilidades" },
-    { text: "Proyectos", href: "#proyectos" }
+    { text: "Proyectos", href: "#proyectos" },
   ];
 
   links.forEach((linkData) => {
@@ -52,7 +49,6 @@ function generateNavbar() {
     link.textContent = linkData.text;
     link.classList.add("active");
 
-    // Añadir evento de desplazamiento suave
     link.addEventListener("click", smoothScroll);
 
     menu.appendChild(link);
@@ -64,19 +60,14 @@ function generateNavbar() {
 }
 
 function generateFooter() {
-  // Crear el elemento footer
   const footer = document.createElement("footer");
   footer.classList.add("footer");
-
-  // Crear el contenido del footer
   const footerContent = document.createElement("div");
   const footerText = document.createElement("span");
   footerText.textContent = "2024 - Robinson Winiarczyk";
   footerContent.appendChild(footerText);
 
   footer.appendChild(footerContent);
-
-  // Retornar el elemento footer generado
   return footer;
 }
 
@@ -88,55 +79,81 @@ const generatedFooter = generateFooter();
 footerContainer.appendChild(generatedFooter);
 
 const images = {
-  ga: [
-    "image1-card1.jpg",
-    "image2-card1.jpg",
-    // ... otras imágenes de card1
-  ],
+  gc: ["img/gc/001.png",
+    "img/gc/002.png",
+    "img/gc/003.png",
+    "img/gc/004.png"],
   sgu: [
-    "img/SGU/001.png",
-    "img/SGU/002.png",
-    "img/SGU/003.png",
-    "img/SGU/004.png",
-    "img/SGU/005.png",
-  ]
-  // Añade más cardN según sea necesario
+    "img/SGU/000.jpg",
+    "img/SGU/001.jpg",
+    "img/SGU/002.jpg",
+    "img/SGU/003.jpg",
+    "img/SGU/004.jpg",
+    "img/SGU/005.jpg",
+  ],
+  sqe: [
+    "img/sqe/001.png",
+    "img/sqe/002.png",
+  ],
+  hpwg: [
+    "img/hpwg/001.jpg",
+    "img/hpwg/002.jpg",
+    "img/hpwg/003.jpg",
+    "img/hpwg/004.jpg",
+    "img/hpwg/005.jpg",
+  ],
 };
 
+let currentImages = [];
+let currentIndex = 0;
+function setupKeyListener() {
+  document.addEventListener("keydown", handleKeyPress);
+}
 
-let currentImages = []; // Array de imágenes cargadas en el modal actual
-let currentIndex = 0;   // Índice de la imagen actual
+function removeKeyListener() {
+  document.removeEventListener("keydown", handleKeyPress);
+}
+
+function handleKeyPress(event) {
+  if (event.key === "ArrowLeft") {
+    // Navegar a la imagen anterior
+    changeImage(-1);
+  } else if (event.key === "ArrowRight") {
+    // Navegar a la imagen siguiente
+    changeImage(1);
+  } else if (event.key === "Escape") {
+    // Cerrar el modal
+    
+    closeModal();
+  }
+}
 
 function openModal(cardId) {
   const modal = document.getElementById("modal");
   const modalImage = document.getElementById("modal-image");
 
-  // Verifica que el arreglo de imágenes existe para el ID proporcionado
   if (images[cardId]) {
     currentImages = images[cardId];
     currentIndex = 0;
     modalImage.src = currentImages[currentIndex];
-    modal.style.display = "flex"; // Muestra el modal
+    modal.style.display = "flex";
+    setupKeyListener();
   }
 }
 
 function closeModal() {
   const modal = document.getElementById("modal");
   modal.style.display = "none";
+  removeKeyListener();
 }
 
-
 function changeImage(direction) {
-  // Cambiar el índice de la imagen actual
   currentIndex += direction;
 
-  // Validar límites del índice
   if (currentIndex < 0) {
-    currentIndex = currentImages.length - 1; // Última imagen
+    currentIndex = currentImages.length - 1;
   } else if (currentIndex >= currentImages.length) {
-    currentIndex = 0; // Primera imagen
+    currentIndex = 0;
   }
-
-  // Actualizar la imagen del modal
   document.getElementById("modal-image").src = currentImages[currentIndex];
 }
