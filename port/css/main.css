@@ -365,5 +365,21 @@ h3 {
     margin: auto;
     padding: 0rem;
   }
+
+  .habilidades-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 64px);
+  }
+  
+  .habilidades-imagenes .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: #ece2f7;
+    border-radius: 10px;
+    border: 5px solid #ece2f7;
+  }
 }
 
