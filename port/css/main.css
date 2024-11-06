@@ -158,6 +158,8 @@ h3 {
   color: #d6a9ff;
 }
 
+
+
 .acerca,
 .habilidades {
   display: grid;
@@ -334,11 +336,6 @@ h3 {
     overflow: hidden;
 }
 
-
-.proyectos .card {
-    width: 100%;
-}
-
 .modal-content {
     width: 100%; 
   }
@@ -363,11 +360,23 @@ h3 {
     grid-template-columns: 1fr;
     width: 90vw;
     margin: auto;
-    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .habilidades-imagenes {
     grid-template-columns: repeat(4, 64px);
   }
+
+
 }
 
+
+hr{
+  display: flex;
+  background-color: rgba(0, 128, 128, 0.1);
+  width: 80%;
+  margin:auto;
+  border-radius: 50%;
+
+}
