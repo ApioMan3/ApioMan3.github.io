@@ -295,7 +295,7 @@ h3 {
 
 .close {
   position: absolute;
-  top: 15px;
+  top: 25px;
   right: 15px;
   font-size: 40px;
   color: white;
@@ -335,8 +335,11 @@ h3 {
 
   body {
     overflow-x: hidden;
-    width: 95vw;
+    width: 90vw;
     margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    
   }
 
 .modal, .modal-content, .modal-image {
@@ -364,13 +367,13 @@ h3 {
   }
 
   .prev, .next {
-    font-size: 32px;
+    font-size: 24px;
     padding: 10px;
   }
+
   .section {
     max-width: 100%;
-    margin: 5rem 0;
+    margin: 4rem 0;
   }
-
 }
 
