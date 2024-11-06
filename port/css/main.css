@@ -138,6 +138,13 @@ main {
   font-family: "Poppins";
 }
 
+.footer a{
+  color: #ffffff80;
+  background: transparent;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
 /* Fixed Button */
 .fixed-button {
   position: fixed;
@@ -160,9 +167,6 @@ main {
 }
 
 
-.inicio img {
-  border-radius: 50%;
-}
 
 h1,
 h2,
@@ -180,7 +184,7 @@ h3 {
 }
 
 .acerca {
-  grid-template-columns: 4fr 7fr;
+  grid-template-columns: 2fr 8fr;
 }
 
 .habilidades {
@@ -192,6 +196,11 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+.acerca-contact img{
+  width: auto;
+  padding-top: 10px;
 }
 
 .habilidades-imagenes {

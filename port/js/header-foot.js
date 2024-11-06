@@ -63,8 +63,9 @@ function generateFooter() {
   const footer = document.createElement("footer");
   footer.classList.add("footer");
   const footerContent = document.createElement("div");
-  const footerText = document.createElement("span");
-  footerText.textContent = "2024 - Robinson Winiarczyk";
+  const footerText = document.createElement("a");
+  footerText.textContent = "Robinson Winiarczyk - RobinsonWiniarczyk@gmail.com";
+  footerText.setAttribute("href","mailto:robinsonwiniarczyk@gmail.com?Subject=Contacto%20vía%20web");
   footerContent.appendChild(footerText);
 
   footer.appendChild(footerContent);
