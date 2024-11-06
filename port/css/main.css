@@ -311,22 +311,21 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
-  .acerca,
-  .habilidades {
-    grid-template-columns: 1fr;
-  }
-
-  .proyectos .card {
-    width: 95%;
-  }
-
   body {
     overflow-x: hidden;
-    width: 90%;
+    width: 100vw;
     margin: 0;
     align-items: center;
     justify-content: center;
     
+  }
+  .navbar, .footer {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .proyectos .card {
+    width: 100vw;
   }
 
 .modal, .modal-content, .modal-image {
@@ -335,17 +334,13 @@ h3 {
     overflow: hidden;
 }
 
-.navbar, .footer {
-    width: 90%;
-    box-sizing: border-box;
-}
 
 .proyectos .card {
     width: 100%;
 }
 
 .modal-content {
-    width: 90%; 
+    width: 100%; 
   }
 
   .close {
@@ -359,8 +354,16 @@ h3 {
   }
 
   .section {
-    max-width: 90%;
+    max-width: 100%;
     margin: 4rem 0;
+  }
+
+  .acerca,
+  .habilidades {
+    grid-template-columns: 1fr;
+    width: 90vw;
+    margin: auto;
+    padding: 0rem;
   }
 }
 
