@@ -1,4 +1,3 @@
-/* General */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,7 +23,6 @@ button {
   cursor: pointer;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   z-index: 2;
@@ -117,12 +115,10 @@ body.open .navbar-menu {
   transition: all 0.3s ease;
 }
 
-/* Main Content */
 main {
   padding-top: 64px;
 }
 
-/* Footer */
 .footer {
   position: fixed;
   z-index: 1;
@@ -143,19 +139,6 @@ main {
   background: transparent;
   padding: 0 8px;
   text-decoration: none;
-}
-
-/* Fixed Button */
-.fixed-button {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: #6a0dad;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: 1rem;
 }
 
 .section {
@@ -193,8 +176,8 @@ h3 {
 
 .acerca-img img,
 .habilidades-imagenes .icon img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: fill;
 }
 
@@ -245,25 +228,7 @@ h3 {
 }
 
 
-@media only screen and (min-width: 768px) {
-  .navbar-menu {
-    position: static;
-    translate: 0 0;
-    width: auto;
-    background: transparent;
-    flex-direction: row;
-    visibility: visible;
-  }
 
-  .navbar-burger {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: space-between;
-    padding: 0 16px;
-  }
-}
 
 .modal {
   display: none; 
@@ -323,6 +288,28 @@ h3 {
   right: 15px;
 }
 
+
+@media only screen and (min-width: 768px) {
+  .navbar-menu {
+    position: static;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+
+  }
+
+  .navbar-burger {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .acerca,
   .habilidades {
@@ -335,10 +322,10 @@ h3 {
 
   body {
     overflow-x: hidden;
-    width: 90vw;
+    width: 90%;
     margin: 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     
   }
 
@@ -349,7 +336,7 @@ h3 {
 }
 
 .navbar, .footer {
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
 }
 
@@ -372,7 +359,7 @@ h3 {
   }
 
   .section {
-    max-width: 100%;
+    max-width: 90%;
     margin: 4rem 0;
   }
 }
