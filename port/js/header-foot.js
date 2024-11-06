@@ -87,7 +87,15 @@ const images = {
     "img/gc/005.jpg",
     "img/gc/006.jpg",
     "img/gc/007.jpg"],
-    
+  gu: [
+    "img/gu/001.jpg",
+    "img/gu/002.jpg",
+    "img/gu/003.jpg",
+    "img/gu/004.jpg",
+    "img/gu/005.jpg",
+    "img/gu/006.jpg",
+    "img/gu/007.jpg",
+    "img/gu/008.jpg"],
   sgu: [
     "img/sguts/000.jpg",
     "img/sguts/001.jpg",
