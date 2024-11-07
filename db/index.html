@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Ball Z site</title>
+    <link rel="stylesheet" href="css/mainstyle.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div id="contenido">
+      <h1>Bienvenido al sitio definitivo de DBZ</h1>
+      <p id="intro">
+        ¡Desata tu ki y únete a la acción! Explora nuestra variedad de juegos
+        inspirados en Dragon Ball y prepárate para vivir emocionantes aventuras
+        llenas de poder y diversión. ¿Estás listo para ser el próximo héroe del
+        universo Dragon Ball? ¡Ven y descubre tu destino!
+      </p>
+      <div class="divJuego" class="ocioizq" onclick="irAPagina('battle.html')">
+        <div class="img"><img src="img/index/battle.png" alt="" /></div>
+        <div class="texto">
+          <p>
+            ¡Prepárate para el épico enfrentamiento entre Goku y Piccolo en el
+            Torneo de las Artes Marciales! Únete a la batalla más intensa del
+            universo Dragon Ball y descubre quién será el ganador definitivo en
+            esta lucha por la supremacía.
+          </p>
+        </div>
+      </div>
+
+      <div class="divJuego" class="ocioder" onclick="irAPagina('memory.html')">
+        <div class="texto">
+          <p>
+            ¿Crees que tienes una memoria excelente? Pon a prueba tus
+            habilidades en nuestro desafiante juego de memoria de Dragon Ball.
+            ¡Encuentra las parejas de personajes en el menor tiempo posible y
+            demuestra que eres un verdadero fan!
+          </p>
+        </div>
+        <div class="img"><img src="img/index/memory.png" alt="" /></div>
+      </div>
+
+      <div
+        class="divJuego"
+        class="ocioizq"
+        onclick="irAPagina('dragondle.html')"
+      >
+        <div class="img"><img src="img/index/wordle.png" alt="" /></div>
+        <div class="texto">
+          <p>
+            ¿Te gustan los desafíos de palabras? ¡Entonces te encantará
+            DragonDle! Adivina el nombre del personaje de Dragon Ball oculto
+            detrás de las letras. ¡Pero cuidado, cada error te acerca más a la
+            derrota!
+          </p>
+        </div>
+      </div>
+
+      <div class="divJuego" class="ocioder" onclick="irAPagina('quiz.html')">
+        <div class="texto">
+          <p>
+            ¡Prepárate para un gran desafío! Nuestro quiz sobre Dragon Ball
+            pondrá a prueba tu conocimiento de la serie. Responde preguntas
+            sobre personajes, técnicas y eventos para demostrar que eres el
+            maestro de Dragon Ball.
+          </p>
+        </div>
+        <div class="img"><img src="img/index/quiz.png" alt="" /></div>
+      </div>
+
+      <div class="divJuego" class="ocioizq" onclick="irAPagina('creator.html')">
+        <div class="img"><img src="img/index/cac.png" alt="" /></div>
+        <div class="texto">
+          <p>
+            ¡Da rienda suelta a tu imaginación y crea tu propio personaje de
+            Dragon Ball! Con nuestro Creador de Personajes, puedes diseñar un
+            luchador único personalizando su aspecto.
+          </p>
+        </div>
+      </div>
+
+      <script>
+        function irAPagina(url) {
+          window.location.href = url;
+        }
+      </script>
+    </div>
+    <div id="espaciado"></div>
+    <div id="footer"></div>
+    <script src="js/headfoot.js"></script>
+  </body>
+</html>
