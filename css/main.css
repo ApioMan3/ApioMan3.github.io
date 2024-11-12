@@ -176,6 +176,11 @@ h3 {
   grid-template-columns: 7fr 3fr;
 }
 
+.inicio img {
+  max-width: 100%;
+  height: auto;
+}
+
 .acerca-img img,
 .habilidades-imagenes .icon img {
   width: 80%;
