@@ -37,14 +37,17 @@ const listaPersonajes = [
     { nombre: "BROLY", descripcion: "El Super Saiyan Legendario.", imagen: "img/dragondle/BROLY.png" },
     { nombre: "TOPPO", descripcion: "Miembro de las tropas del orgullo.", imagen: "img/dragondle/TOPPO.png" },
     { nombre: "CHAOS", descripcion: "Alumno de la escuela de la grulla.", imagen: "img/dragondle/CHAOS.png" },
-    { nombre: "FROST", descripcion: "Combatiente del 6to universo.", imagen: "img/dragondle/FROST.png" }
+    { nombre: "FROST", descripcion: "Combatiente del 6to universo.", imagen: "img/dragondle/FROST.png" },
+    { nombre: "GOMAH", descripcion: "Makaio del reino demoníaco.", imagen: "img/dragondle/GOMAH.png" },
+    { nombre: "ARINS", descripcion: "Científica del reino demoníaco.", imagen: "img/dragondle/ARINS.png" },
+    { nombre: "DEGES", descripcion: "Glind del reino demoníaco", imagen: "img/dragondle/DEGES.png" },
 ];
 //eligiendo un personaje del arreglo y iniciando intentos.
 let aleatorio = Math.floor(Math.random() * listaPersonajes.length);
 let pjRandom = listaPersonajes[aleatorio];
 let nombrepjRandom = pjRandom.nombre;
 let intentos = 0;
-console.log(nombrepjRandom);
+console.log("El personaje a adivinar es: "+nombrepjRandom+". Deberías volver a jugar sin hacer trampa.");
 let juego = document.getElementById("wordle");
 
 //asignando el botón enter al botón

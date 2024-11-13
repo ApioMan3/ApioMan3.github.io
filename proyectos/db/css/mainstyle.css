@@ -4,12 +4,10 @@
 }
 
 body {
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #fff5ae;
     justify-content: center;
     align-items: center;
-    width: auto;
+    width: 100%;
     overflow-x: hidden;
     overflow-y:scroll;
 
