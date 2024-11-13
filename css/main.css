@@ -249,8 +249,12 @@ h3 {
   color: #f9f9f9;
   text-decoration: none;
   cursor: pointer;
-  background-color: #7b6192;
-  border-radius: 10px;
+  background: rgb(69,61,77);
+  background: linear-gradient(180deg, rgba(69,61,77,1) 0%, rgba(86,73,97,1) 12%, rgba(123,97,146,1) 50%, rgba(86,73,97,1) 88%, rgba(69,61,77,1) 100%);
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 0.15rem;
   padding: 10px;
 }
 
