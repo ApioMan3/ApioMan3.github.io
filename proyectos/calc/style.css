@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Digital";
+    src: url("DS.TTF") format("trueType");
+  }
+  
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: lightgray;
+  }
+  
+  .calculadora {
+    background-color: #808080;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .pantalla {
+    width: calc(100%-10px);
+    height: 48px;
+    font-family: "Digital",sans-serif;
+    font-size: 32px;
+    background-color: rgb(185, 244, 156);
+    color: #000000;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+  }
+
+  #numero{
+    background-color: #303030;
+    color: #fff;
+  }
+
+  #numero:hover {
+    background-color: #505050;
+  }
+
+  #calcular{
+    background-color: orange;
+    color: #fff;
+  }
+
+  #calcular:hover {
+    background-color: rgb(246, 191, 90);
+  }
+
+  #limpiar{
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+  }
+
+  #limpiar:hover {
+    background-color: rgb(232, 78, 78);
+  }
+
+  #operacion{
+    background-color: rgb(21, 96, 165);
+    color: #fff;
+  }
+
+  #operacion:hover {
+    background-color: rgb(61, 130, 195);
+  }
