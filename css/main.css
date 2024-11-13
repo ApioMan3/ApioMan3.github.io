@@ -103,7 +103,7 @@ body.open .navbar-menu {
 
 
 .navbar-menu>a {
-  color: #ffffff80;
+  color: #fafafa;
   background: transparent;
   padding: 0 8px;
   text-decoration: none;
@@ -135,7 +135,7 @@ main {
 }
 
 .footer a{
-  color: #ffffff80;
+  color: #fafafa;
   background: transparent;
   padding: 0 8px;
   text-decoration: none;
@@ -214,17 +214,18 @@ h3 {
 .proyectos {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
 .proyectos .card {
   background-color: #333;
-  color: #d0d0ff;
+  color: #fafafa;
   padding: 1rem;
   border-radius: 10px;
   width: 48%;
   text-align: center;
+  justify-items: center;
 }
 
 .proyectos .card img {
@@ -232,9 +233,30 @@ h3 {
   height: 200px;
   border-radius: 10px;
   object-fit: cover;
+  cursor: pointer;
+}
+
+.proyectos .card .sinGaleria {
+  cursor: default;
+}
+
+.proyectos p{
+  margin-top: 1rem;
 }
 
 
+.proyectos a {
+  color: #f9f9f9;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #7b6192;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.proyecto-titulo{
+  margin-bottom: 5rem;
+}
 
 
 .modal {
@@ -295,9 +317,6 @@ h3 {
   right: 15px;
 }
 
-.proyectos a {
-  color: #ece2f7;
-}
 
 @media only screen and (min-width: 768px) {
   .navbar-menu {

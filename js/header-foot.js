@@ -137,14 +137,10 @@ function removeKeyListener() {
 
 function handleKeyPress(event) {
   if (event.key === "ArrowLeft") {
-    // Navegar a la imagen anterior
     changeImage(-1);
   } else if (event.key === "ArrowRight") {
-    // Navegar a la imagen siguiente
     changeImage(1);
   } else if (event.key === "Escape") {
-    // Cerrar el modal
-    
     closeModal();
   }
 }

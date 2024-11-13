@@ -1,4 +1,5 @@
-#arena {
+
+#arena{
     width: 512px;
     height: 256px;
     background-image: url("../img/arena/arenas/0.gif");
@@ -20,6 +21,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
     justify-content: center;
+    max-width: auto;
+    max-height: 30vp;
+
 }
 
 button {
@@ -49,7 +53,6 @@ button:disabled:hover {
 
 #status {
     display: flex;
-    /* Para colocar los div en una misma línea */
     justify-content: center;
     text-shadow: -1px 1px white;
 }
@@ -104,7 +107,7 @@ background-color: rgba(255, 165, 0);
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*para centrarla en la página*/
+    transform: translate(-50%, -50%);
     background-color: #fa8b2a;
     padding: 20px;
     display: none;
@@ -115,7 +118,7 @@ background-color: rgba(255, 165, 0);
     border: #c56613;
     border-style: double;
     border-width: 10px;
-    z-index: 9; /*arriba los elentos de la página*/
+    z-index: 9;
   }
   
   .cerrar {
@@ -124,7 +127,7 @@ background-color: rgba(255, 165, 0);
     right: 10px;
     background: none;
     border: none;
-    cursor: pointer; /*cambia el cursor a la manito*/
+    cursor: pointer;
   }
 
 @media screen and (max-width:550px) {
