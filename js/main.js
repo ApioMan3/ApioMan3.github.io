@@ -38,9 +38,10 @@ function generateNavbar() {
 
   const links = [
     { text: "Inicio", href: "#inicio" },
-    { text: "Acerca de mi", href: "#acerca" },
+    { text: "Sobre mi", href: "#acerca" },
     { text: "Habilidades", href: "#habilidades" },
-    { text: "Proyectos", href: "#proyectos" },
+    { text: "Proyectos", href: "#proyectos" }/*,
+    { text: "Galeria", href: "#galeria" },*/
   ];
 
   links.forEach((linkData) => {
