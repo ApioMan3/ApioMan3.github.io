@@ -37,7 +37,7 @@ function generateNavbar() {
   menu.classList.add("navbar-menu");
 
   const links = [
-    { text: "Inicio", href: "https://drive.google.com/file/d/1nHMlCW9xdT1yZf7LUMtph1Tkf7B_DJF3/view" },
+    { text: "Inicio", href: "#inicio"},
     { text: "Sobre mi", href: "#acerca" },
     { text: "Habilidades", href: "#habilidades" },
     { text: "Proyectos", href: "#proyectos" }/*,
