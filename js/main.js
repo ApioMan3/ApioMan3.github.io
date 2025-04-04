@@ -124,6 +124,23 @@ const images = {
     "img/ta/003.jpg",
     "img/ta/004.jpg",
   ],
+  issd: [
+    "img/issd/000.jpg",
+    "img/issd/001.jpg",
+    "img/issd/002.jpg",
+    "img/issd/003.jpg",
+    "img/issd/004.jpg",
+  ],
+  cg: [
+    "img/cg/000.jpg",
+    "img/cg/001.jpg",
+    "img/cg/002.jpg",
+    "img/cg/003.jpg",
+    "img/cg/004.jpg",
+    "img/cg/005.jpg",
+    "img/cg/006.jpg",
+    "img/cg/007.jpg",
+  ],
 };
 
 let currentImages = [];
