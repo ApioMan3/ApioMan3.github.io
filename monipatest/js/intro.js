@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const intro = document.getElementById("intro-container");
   const main = document.querySelector("main");
   const pawCount = Math.floor(Math.random() * 6) + 15; // entre 10 y 15
-  const sounds = ["toy2.mp3", "toy2.mp3", "toy2.mp3"];
+  //const sounds = ["toy2.mp3", "toy2.mp3", "toy2.mp3"];
 
   // Crear huellitas al azar
   for (let i = 0; i < pawCount; i++) {
     const paw = document.createElement("img");
-    paw.src = "img/paw.png";
+    paw.src = "img/Paw.png";
     paw.className = "patita";
     const size = Math.random() * 40 + 40; // entre 40 y 80px
     const x = Math.random() * 100; // %
