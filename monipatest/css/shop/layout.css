@@ -1,0 +1,125 @@
+/*layout.css*/
+body{
+background-color: #f5e1c1;
+padding-top: 70px;
+}
+
+.contenedor-tienda {
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  background: #f5e1c1;
+}
+
+/* Panel filtros */
+#panel-filtros {
+  flex: 0 0 20%;
+  background: #fbf2e5;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-y: auto;
+  max-height: fit-content;
+  order: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 80px;
+}
+
+/* Panel productos */
+#panel-productos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-tienda {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Mostrar botón toggle filtros en móvil */
+  .btn-toggle-filtros {
+    display: inline-block !important;
+    background: #A66B2F;
+    color: #e9ca99;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+    z-index: 10;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    align-self: center
+  }
+
+  .btn-toggle-filtros:hover {
+    background-color: #8F561D;
+  }
+
+  /* Ocultar panel filtros por defecto en móvil */
+  #panel-filtros {
+    flex: unset;
+    width: 100%;
+    max-height: none;
+    order: 1;
+    display: none;
+    background: #f4f4f4;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 5;
+  }
+
+  /* Mostrar filtros cuando se active */
+  #panel-filtros.show {
+    display: block;
+  }
+
+  /* Panel productos debajo de filtros */
+  #panel-productos {
+    order: 20;
+  }
+}
+
+/* Por defecto oculto */
+.btn-toggle-filtros {
+  display: none;
+}
+
+.ordenamiento{
+  background-color: #fbf2e5;
+  padding: 10px;
+  color: #4e3418;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.ordenamiento select {
+  background-color: #f5e1c1;
+  color: #4e3418;
+  border: 1px solid #d1bfa3;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-left: 8px;
+}
+
+.ordenamiento select:focus {
+  border-color: #a66b2f;
+  background-color: #fbf2e5;
+}

@@ -1,0 +1,42 @@
+.intro-container {
+  position: fixed;
+  inset: 0;
+  background-color: #4e3418;
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-out;
+}
+
+
+.patita {
+  position: absolute;
+  width: 50px;
+  opacity: 0;
+  transform: scale(0.5) rotate(0deg);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+  animation: aparecer 1s ease-out forwards;
+}
+
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(0deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) rotate(var(--rot));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rot));
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}

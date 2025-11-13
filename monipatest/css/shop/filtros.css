@@ -1,0 +1,125 @@
+/*filtros.css*/
+.btn-toggle {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Categorías principales */
+.filtro-principal > .btn-toggle {
+  text-align: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #e9ca99;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #A66B2F;
+  border: 1px solid #e9ca99;
+  margin-top: 10px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.icono-flecha{
+  float:right;
+}
+
+.filtro-principal > .btn-toggle:hover {
+  background-color: #8F561D;
+  border-color: #aeb4bb;
+  cursor: pointer;
+}
+
+/* Categorías secundarias */
+.filtro-categoria > .btn-toggle {
+  text-align: left;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #4e3418;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #e8ca99;
+  border: 1px solid #4e3418;
+  margin-top: 8px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+
+}
+
+.filtro-categoria > .btn-toggle:hover {
+  background-color: #D6B47F;
+  border-color: #4e3418;
+  cursor: pointer;
+}
+
+/* Subcategorías */
+.filtro-subcategoria {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 4px 0;
+  border-radius: 3px;
+  color: #4e3418;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease;
+}
+
+.filtro-subcategoria:hover {
+  background-color: #D6B47F30;
+  color: #222;
+}
+
+.filtro-subcategoria.seleccionado {
+  font-weight: 600;
+  background-color: #bbb;
+  color: #111;
+}
+
+/* Botón "Ver todos" */
+.btn-ver-todos {
+  background: #C95F2B;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-todos:hover {
+  background: #8f3f18;
+}
+
+/* Checkboxes */
+.filtro-marcas{
+  margin-top: 20px;
+}
+
+.filtro-variedades{
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #A66B2F;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  accent-color: #C95F2B;
+  box-shadow: 0 0 0 2px #C95F2B33;
+}
+
+.checkbox-label input[type="checkbox"]:not(:checked) {
+  accent-color: #e8ca99;
+}

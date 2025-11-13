@@ -1,0 +1,461 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffdf9;
+  color: #2b1d12;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  text-align: center;
+  color: #3d2815;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ==========================
+   EFECTO FADE IN
+========================== */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================
+   BOTONES
+========================== */
+.btn, .btn-contacto {
+  display: inline-block;
+  background-color: #f4b400;
+  color: #2b1d12;
+  padding: 0.8em 1.5em;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover, .btn-contacto:hover {
+  background-color: #fcd34d;
+}
+
+/* ==========================
+   BANNER PRINCIPAL
+========================== */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  background-color: #2b1d12;
+}
+
+.banner-slider-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.banner-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 0.8em 1.6em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-button:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: rgba(255,255,255,0.8);
+}
+
+#arrow-left { left: 15px; }
+#arrow-right { right: 15px; }
+
+.banner-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.banner-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner-dot.active {
+  background-color: #fff;
+}
+
+/* ==========================
+   SECCIÓN HISTORIA
+========================== */
+.historia {
+  padding: 80px 10%;
+  background-color: #fff7ec;
+}
+
+.historia h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1em;
+}
+
+.intro-historia {
+  text-align: center;
+  margin-bottom: 3em;
+  max-width: 700px;
+  margin-inline: auto;
+  color: #4b3b2c;
+}
+
+.perritas {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.perrita {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.perrita:hover {
+  transform: translateY(-6px);
+}
+
+.perrita img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.perrita .texto {
+  padding: 1em;
+  text-align: center;
+}
+
+/* ==========================
+   SECCIÓN MISIÓN
+========================== */
+.mision {
+  background-color: #3d2815;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.mision h2 {
+  color: #ffd166;
+  margin-bottom: 0.8em;
+}
+
+/* ==========================
+   SECCIÓN VALORES
+========================== */
+.valores {
+  padding: 80px 10%;
+  background-color: #fdf8f3;
+}
+
+.valores-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.valores-grid div {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.valores-grid div:hover {
+  transform: translateY(-5px);
+}
+
+.valores-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ==========================
+   SECCIÓN NOVEDADES
+========================== */
+.novedades {
+  padding: 80px 10%;
+}
+
+.novedades-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.novedades-grid article {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.novedades-grid article:hover {
+  transform: translateY(-5px);
+}
+
+.novedades-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ==========================
+   SECCIÓN ADOPTA
+========================== */
+.adopta {
+  background-color: #fff2d0;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* ==========================
+   SECCIÓN EVENTOS
+========================== */
+.eventos {
+  padding: 80px 10%;
+  background-color: #fffdf9;
+}
+
+.eventos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.eventos-grid div {
+  width: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.eventos-grid div:hover {
+  transform: translateY(-5px);
+}
+
+.eventos-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ==========================
+   SECCIÓN TIPS
+========================== */
+.tips {
+  background-color: #f5f0eb;
+  padding: 80px 10%;
+}
+
+.tips ul {
+  max-width: 600px;
+  margin: 2em auto;
+  list-style: paw;
+  padding-left: 0;
+}
+
+.tips li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   SECCIÓN EQUIPO
+========================== */
+.equipo {
+  background-color: #fff7ec;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.equipo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.equipo-grid div {
+  width: 200px;
+}
+
+.equipo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ==========================
+   SECCIÓN TESTIMONIOS
+========================== */
+.testimonios {
+  padding: 80px 10%;
+  background-color: #3d2815;
+  color: #fff;
+}
+
+.testimonios blockquote {
+  max-width: 700px;
+  margin: 1.5em auto;
+  font-style: italic;
+  border-left: 4px solid #f4b400;
+  padding-left: 1em;
+}
+
+/* ==========================
+   SECCIÓN COLABORACIONES
+========================== */
+.colaboraciones {
+  background-color: #fdf8f3;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* ==========================
+   SECCIÓN CONTACTO
+========================== */
+.contacto {
+  background-color: #fff2d0;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.btn-contacto {
+  background-color: #2b1d12;
+  color: #fff;
+}
+
+.btn-contacto:hover {
+  background-color: #4b341e;
+}
+
+/* ==========================
+   MEDIA QUERIES
+========================== */
+@media (max-width: 768px) {
+  .banner {
+    height: 45vh;
+  }
+
+  .banner-button {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+  }
+
+  .perritas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .valores-grid,
+  .novedades-grid,
+  .eventos-grid,
+  .equipo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+}
