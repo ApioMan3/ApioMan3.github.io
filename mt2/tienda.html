@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monipa - Tienda</title>
+  <link rel="stylesheet" href="css/header-footer.css" />
+  <link rel="stylesheet" href="css/shop/filtros.css" />
+  <link rel="stylesheet" href="css/shop/interacciones.css" />
+  <link rel="stylesheet" href="css/shop/layout.css" />
+  <link rel="stylesheet" href="css/shop/productos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="/js/tienda.js"></script>
+</head>
+<body>
+  <header id="main-header"></header>
+
+  <main class="contenedor-tienda">
+    <button class="btn-toggle-filtros" id="btn-toggle-filtros">Filtros <span class="icono-flecha">▼</span></button>
+    <section id="panel-filtros" class="filtros"></section>
+    <section id="panel-productos">
+      <div class="ordenamiento">
+        <label for="ordenar">Ordenar por:</label>
+        <select id="ordenar">
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+          <option value="precio-asc">Menor precio</option>
+          <option value="precio-desc">Mayor precio</option>
+        </select>
+      </div>
+
+      <div id="tarjetas-productos" class="productos-grid"></div>
+
+      <div id="paginado" class="paginado"></div>
+    </section>
+  </main>
+  <div id="notificacion-carrito" class="notificacion-carrito">Producto agregado al carrito</div>
+  <footer id="main-footer"></footer>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monipa - Tu tienda de mascotas</title>
+  <meta name="description" content="Monipa - Productos de calidad para tu mascota. Amor, confianza y comunidad.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <img src="img/logo.png" alt="Monipa Logo" class="loading-logo">
+      <div class="loading-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="main-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <a href="#home" class="logo-link">
+          <img src="img/logo.png" alt="Monipa Logo" class="logo">
+        </a>
+      </div>
+
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link" data-page="home">Inicio</a></li>
+          <li><a href="#tienda" class="nav-link" data-page="tienda">Tienda</a></li>
+          <li><a href="#carrito" class="nav-link cart-link" data-page="carrito">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-badge" id="cart-badge">0</span>
+            </a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer">
+    <button class="drawer-close" id="drawer-close" aria-label="Cerrar menú">✕</button>
+    <nav class="drawer-nav">
+      <ul>
+        <li><a href="#home" class="drawer-link" data-page="home">Inicio</a></li>
+        <li><a href="#tienda" class="drawer-link" data-page="tienda">Tienda</a></li>
+        <li><a href="#carrito" class="drawer-link" data-page="carrito">Carrito <span class="cart-badge-mobile"
+              id="cart-badge-mobile">0</span></a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="app" class="app-content"></main>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="main-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; 2025 Monipa. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+          <a href="#home">Inicio</a>
+          <a href="#tienda">Tienda</a>
+          <a href="mailto:contacto@monipa.com">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast -->
+  <div id="notification" class="notification"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>
