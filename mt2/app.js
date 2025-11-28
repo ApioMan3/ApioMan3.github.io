@@ -295,14 +295,7 @@ const TiendaPage = {
   render() {
     return `
       <div class="page tienda-page">
-        <!-- Banner Tienda -->
-        <section class="tienda-banner">
-          <div class="tienda-banner-slider" id="tienda-banner-slider"></div>
-          <button class="banner-arrow left" id="tienda-arrow-left">‹</button>
-          <button class="banner-arrow right" id="tienda-arrow-right">›</button>
-          <div class="banner-dots" id="tienda-banner-dots"></div>
-        </section>
-
+       <div> <br></div>
         <div class="tienda-container">
           <aside class="filtros-section" id="filtros-section">
             <h2 class="filtros-title">Filtros</h2>
@@ -336,58 +329,10 @@ const TiendaPage = {
   },
 
   async init() {
-    this.initBanner();
     await this.loadProductos();
     this.renderFiltros();
     this.renderProductos();
     this.initEventListeners();
-  },
-
-  initBanner() {
-    const banners = [
-      { img: 'img/placeholder4.jpg' },
-      { img: 'img/placeholder5.jpg' },
-      { img: 'img/placeholder6.jpg' }
-    ];
-
-    const slider = document.getElementById('tienda-banner-slider');
-    const dotsContainer = document.getElementById('tienda-banner-dots');
-    let currentSlide = 0;
-
-    banners.forEach((banner, index) => {
-      const slide = document.createElement('div');
-      slide.className = 'tienda-banner-slide';
-      slide.innerHTML = `<img src="${banner.img}" alt="Banner ${index + 1}">`;
-      slider.appendChild(slide);
-
-      const dot = document.createElement('div');
-      dot.className = `banner-dot ${index === 0 ? 'active' : ''}`;
-      dot.onclick = () => goToSlide(index);
-      dotsContainer.appendChild(dot);
-    });
-
-    const goToSlide = (index) => {
-      currentSlide = index;
-      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-      document.querySelectorAll('#tienda-banner-dots .banner-dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlide);
-      });
-    };
-
-    document.getElementById('tienda-arrow-left').onclick = () => {
-      currentSlide = (currentSlide - 1 + banners.length) % banners.length;
-      goToSlide(currentSlide);
-    };
-
-    document.getElementById('tienda-arrow-right').onclick = () => {
-      currentSlide = (currentSlide + 1) % banners.length;
-      goToSlide(currentSlide);
-    };
-
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % banners.length;
-      goToSlide(currentSlide);
-    }, 5000);
   },
 
   async loadProductos() {
