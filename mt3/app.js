@@ -574,7 +574,7 @@ const CarritoPage = {
       container.innerHTML = `
         <div class="carrito-vacio">
           <img src="img/carritovacio.png" alt="Carrito vacío">
-          <h2>Tu carrito está vacío</h2>
+          <h2>Tu carrito está vacío. Ayudá a Nico en sus compras.</h2>
           <a href="#tienda" class="btn">Ir a la tienda</a>
         </div>
       `;
