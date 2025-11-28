@@ -224,10 +224,15 @@ const HomePage = {
   },
 
   initBanner() {
+    const getResponsiveImage = (index) => {
+      const isMobile = window.innerWidth < 768;
+      return isMobile ? `img/banner-mobile${index}.jpg` : `img/banner-desktop${index}.jpg`;
+    };
+
     const banners = [
-      { img: 'img/placeholder1.jpg', btnText: 'Ver Tienda', btnPos: { top: '70%', left: '50%' } },
-      { img: 'img/placeholder2.jpg', btnText: 'Descubrir', btnPos: { top: '70%', left: '50%' } },
-      { img: 'img/placeholder3.jpg', btnText: 'Explorar', btnPos: { top: '70%', left: '50%' } }
+      { desktop: 'img/banner-desktop1.jpg', mobile: 'img/banner-mobile1.jpg', btnText: 'Ver Tienda', btnPos: { top: '70%', left: '50%' } },
+      { desktop: 'img/banner-desktop2.jpg', mobile: 'img/banner-mobile2.jpg', btnText: 'Descubrir', btnPos: { top: '70%', left: '50%' } },
+      { desktop: 'img/banner-desktop3.jpg', mobile: 'img/banner-mobile3.jpg', btnText: 'Explorar', btnPos: { top: '70%', left: '50%' } }
     ];
 
     const slider = document.getElementById('banner-slider');
@@ -237,8 +242,9 @@ const HomePage = {
     banners.forEach((banner, index) => {
       const slide = document.createElement('div');
       slide.className = 'banner-slide';
+      const img = window.innerWidth < 768 ? banner.mobile : banner.desktop;
       slide.innerHTML = `
-        <img src="${banner.img}" alt="Banner ${index + 1}">
+        <img src="${img}" alt="Banner ${index + 1}">
         <div class="banner-overlay">
           <button class="banner-button" style="top: ${banner.btnPos.top}; left: ${banner.btnPos.left};" onclick="window.location.hash='tienda'">
             ${banner.btnText}
