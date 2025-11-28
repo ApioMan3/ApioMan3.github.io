@@ -1,141 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Monipa - Tienda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monipa - Tu tienda de mascotas</title>
+  <meta name="description" content="Monipa - Productos de calidad para tu mascota. Amor, confianza y comunidad.">
 
-  <link rel="stylesheet" href="css/header-footer.css" />
-  <link rel="stylesheet" href="css/intro.css" />
-  <link rel="stylesheet" href="css/main.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  <script src="js/header.js" defer></script>
-  <script src="js/footer.js" defer></script>
-  <script src="js/intro.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
 </head>
+
 <body>
-  <!-- Intro -->
-  <div id="intro-container" class="intro-container">
-    <!-- <img src="img/perrito.png" alt="Perrito caminando" class="doggo" id="doggo"> -->
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <img src="img/logo.png" alt="Monipa Logo" class="loading-logo">
+      <div class="loading-spinner"></div>
+    </div>
   </div>
 
-  <header id="main-header"></header>
-
-  <main class="contenedor-inicio" style="display:none;">
-
-    <!-- ========== BANNER PRINCIPAL ========== -->
-    <section class="banner fade-section">
-      <div class="banner-slider-wrapper">
-        <div class="banner-slider" id="banner-slider"></div>
+  <!-- Header -->
+  <header id="main-header" class="main-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <a href="#home" class="logo-link">
+          <img src="img/logo.png" alt="Monipa Logo" class="logo">
+        </a>
       </div>
 
-      <button class="arrow arrow-left" id="arrow-left">‹</button>
-      <button class="arrow arrow-right" id="arrow-right">›</button>
-      <div class="banner-dots" id="banner-dots"></div>
-    </section>
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link" data-page="home">Inicio</a></li>
+          <li><a href="#tienda" class="nav-link" data-page="tienda">Tienda</a></li>
+          <li><a href="#carrito" class="nav-link cart-link" data-page="carrito">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-badge" id="cart-badge">0</span>
+            </a></li>
+        </ul>
+      </nav>
 
-    <!-- ========== HISTORIA ========== -->
-    <section class="contacto fade-section">
-      <h2>Contactanos</h2>
-      <p>¿Querés conocernos más o hacer un pedido especial? ¡Escribinos!</p>
-      <a href="mailto:contacto@monipa.com" class="btn-contacto">Enviar mensaje</a>
-    </section>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-    <section id="historia" class="historia fade-section">
-      <h2>Nuestra Historia</h2>
-      <p class="intro-historia">
-        Monipa nace del amor por los animales. Su nombre viene de las tres compañeras que inspiraron este proyecto:
-        <strong>MOra</strong>, <strong>NIco</strong> y <strong>PAmela</strong>.
-      </p>
-      <div class="perritas">
-        <div class="perrita">
-          <img src="img/mora.png" alt="Mora">
-          <div class="texto"><h3>Mora</h3><p>Alegre y curiosa, inspiró los primeros juguetes del local.</p></div>
-        </div>
-        <div class="perrita">
-          <img src="img/nico.png" alt="Nico">
-          <div class="texto"><h3>Nico</h3><p>Tranquilo y fiel, inspiró nuestra línea outdoor.</p></div>
-        </div>
-        <div class="perrita">
-          <img src="img/pamela.png" alt="Pamela">
-          <div class="texto"><h3>Pamela</h3><p>Coqueta y dulce, nos enseñó que cada mascota merece estilo.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mision fade-section">
-      <h2>Nuestra Misión</h2>
-      <p>Promover el bienestar animal a través de productos de calidad y un enfoque responsable hacia nuestros peludos amigos.</p>
-    </section>
-
-    <section class="valores fade-section">
-      <h2>Valores que nos guían</h2>
-      <div class="valores-grid">
-        <div><img src="img/placeholder1.jpg" alt=""><h3>Amor</h3><p>Cada producto está hecho con dedicación y respeto.</p></div>
-        <div><img src="img/placeholder2.jpg" alt=""><h3>Confianza</h3><p>Solo trabajamos con materiales seguros y duraderos.</p></div>
-        <div><img src="img/placeholder3.jpg" alt=""><h3>Comunidad</h3><p>Apoyamos refugios locales y fomentamos la adopción.</p></div>
-      </div>
-    </section>
-
-    <section class="novedades fade-section">
-      <h2>Últimas Novedades</h2>
-      <div class="novedades-grid">
-        <article><img src="img/placeholder4.jpg" alt=""><h3>Nuevo local</h3><p>Visitanos en nuestro nuevo espacio pet-friendly.</p></article>
-        <article><img src="img/placeholder5.jpg" alt=""><h3>Juguetes ecológicos</h3><p>Ahora con materiales reciclados y seguros.</p></article>
-      </div>
-    </section>
-
-    <section class="adopta fade-section">
-      <h2>Adoptá, no compres</h2>
-      <p>Colaboramos con refugios locales. Descubrí cómo ayudar.</p>
-      <a href="#" class="btn">Ver más</a>
-    </section>
-
-    <section class="eventos fade-section">
-      <h2>Eventos y Talleres</h2>
-      <div class="eventos-grid">
-        <div><img src="img/placeholder6.jpg" alt=""><h3>Paseo Solidario</h3><p>Recaudamos fondos para rescates locales.</p></div>
-        <div><img src="img/placeholder7.jpg" alt=""><h3>Taller de Cuidado</h3><p>Aprendé tips para mejorar el día a día de tu mascota.</p></div>
-      </div>
-    </section>
-
-    <section class="tips fade-section">
-      <h2>Tips para tu mascota</h2>
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer">
+    <button class="drawer-close" id="drawer-close" aria-label="Cerrar menú">✕</button>
+    <nav class="drawer-nav">
       <ul>
-        <li>Siempre hidratá a tu perro después de jugar.</li>
-        <li>Usá collares suaves para evitar irritaciones.</li>
-        <li>Premiá las buenas conductas con cariño.</li>
+        <li><a href="#home" class="drawer-link" data-page="home">Inicio</a></li>
+        <li><a href="#tienda" class="drawer-link" data-page="tienda">Tienda</a></li>
+        <li><a href="#carrito" class="drawer-link" data-page="carrito">Carrito <span class="cart-badge-mobile"
+              id="cart-badge-mobile">0</span></a></li>
       </ul>
-    </section>
+    </nav>
+  </aside>
 
-    <section class="equipo fade-section">
-      <h2>Nuestro Equipo</h2>
-      <div class="equipo-grid">
-        <div><img src="img/placeholder8.jpg" alt=""><p>Sofía — Fundadora</p></div>
-        <div><img src="img/placeholder9.jpg" alt=""><p>Martín — Logística</p></div>
-        <div><img src="img/placeholder10.jpg" alt=""><p>Laura — Diseño</p></div>
+  <!-- Main Content -->
+  <main id="app" class="app-content"></main>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="main-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <p>&copy; 2025 Monipa. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+          <a href="#home">Inicio</a>
+          <a href="#tienda">Tienda</a>
+          <a href="mailto:contacto@monipa.com">Contacto</a>
+        </nav>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <section class="testimonios fade-section">
-      <h2>Historias Felices</h2>
-      <blockquote>"Gracias a Monipa, mi perrito tiene su juguete favorito. ¡No lo suelta más!" — <strong>Claudia</strong></blockquote>
-      <blockquote>"El servicio fue excelente, y se nota el amor por los animales." — <strong>Lucas</strong></blockquote>
-    </section>
+  <!-- Notification Toast -->
+  <div id="notification" class="notification"></div>
 
-    <section class="colaboraciones fade-section">
-      <h2>Colaboraciones</h2>
-      <p>Trabajamos junto a refugios, veterinarias y artistas locales para promover una comunidad más solidaria.</p>
-    </section>
-
-    <section class="contacto fade-section">
-      <h2>Contactanos</h2>
-      <p>¿Querés conocernos más o hacer un pedido especial? ¡Escribinos!</p>
-      <a href="mailto:contacto@monipa.com" class="btn-contacto">Enviar mensaje</a>
-    </section>
-  </main>
-
-  <footer id="main-footer"></footer>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="app.js" type="module"></script>
 </body>
+
 </html>

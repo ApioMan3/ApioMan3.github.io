@@ -344,7 +344,6 @@ const TiendaPage = {
   },
 
   initBanner() {
-    /*
     const banners = [
       { img: 'img/placeholder4.jpg' },
       { img: 'img/placeholder5.jpg' },
@@ -388,7 +387,7 @@ const TiendaPage = {
     setInterval(() => {
       currentSlide = (currentSlide + 1) % banners.length;
       goToSlide(currentSlide);
-    }, 5000);*/
+    }, 5000);
   },
 
   async loadProductos() {
